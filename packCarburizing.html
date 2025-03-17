@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pack Carburising - RESCONS</title>
+    <style>
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .title {
+            color: #343d68;
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+            animation: slideInDown 0.8s ease-out;
+        }
+
+        .research-content {
+            line-height: 1.8;
+            text-align: justify;
+            animation: slideInUp 1s ease-out;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            color: #e84949;
+            font-weight: bold;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .image-box {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .image-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(232, 73, 73, 0.9);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .image-box:hover .image-caption {
+            transform: translateY(0);
+        }
+
+        .contact-section {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .key-findings {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #e84949;
+            animation: slideInRight 1s ease-out;
+        }
+
+        .key-findings h3 {
+            color: #343d68;
+            margin-bottom: 15px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .image-box {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .title {
+                font-size: 24px;
+            }
+
+            .research-content {
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-section">
+        <h1 class="title">PACK CARBURISING</h1>
+        
+        <div class="research-content">
+            <p>Pack carburization is the oldest method among the case hardening treatments and sufficient attempts has not been made to understand this process in terms of heat and mass transfer, effect of alloying elements, dimensions of the sample, etc. Thus, a two dimensional mathematical model in cylindrical co-ordinate is developed for simulating pack carburization process for chromium bearing steel (a ternary system (Fe-C-Cr)) in this study.</p>
+            
+            <p>Heat and mass balance equations are solved simultaneously where surface temperature of the sample varies with time, but the carbon potential at the surface during the process remains constant. <span class="highlight">Fully implicit finite volume technique</span> is used to solve the governing equations. A good agreement has been found between the predicted and published data.</p>
+        </div>
+
+        <div class="key-findings">
+            <h3>Key Research Findings</h3>
+            <ul>
+                <li>Two dimension analysis provides better description of the process than one dimension</li>
+                <li>The effect of second dimension is significant especially in predicting the case depth near the corners of the sample</li>
+                <li>Neglecting the second dimension may provide wrong interpretation and affect the operating life of the specimen</li>
+                <li>As the size of the sample increases, the case depth is decreased</li>
+                <li>Thin layer of charcoal packing increases the case depth</li>
+            </ul>
+        </div>
+
+        <div class="image-container">
+            <div class="image-box">
+                <img src="./assets/images/pack1.jpg" alt="Temperature Data Comparison">
+                <div class="image-caption">Figure 1: Comparison between computed and published experimental temperature data</div>
+            </div>
+            <div class="image-box">
+                <img src="./assets/images/pack2.jpg" alt="Carbon Concentration Profile">
+                <div class="image-caption">Figure 2: Computed carbon concentration profile within the specimen at 1173 K for 6 hours (high C concentration at the corner is evident)</div>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <p><strong>For further details, queries, or publications related to this research, please <a href="./contact.html">contact us</a> through our contact information on the website.</strong></p>
+        </div>
+    </div>
+</body>
+</html>

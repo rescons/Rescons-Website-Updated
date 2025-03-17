@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Granular Flow - RESCONS</title>
+    <style>
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .title {
+            color: #343d68;
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+            animation: slideInDown 0.8s ease-out;
+        }
+
+        .research-content {
+            line-height: 1.8;
+            text-align: justify;
+            animation: slideInUp 1s ease-out;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            color: #e84949;
+            font-weight: bold;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .image-box {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 40px;
+        }
+
+        .image-box:hover {
+            transform: scale(1.05);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(232, 73, 73, 0.9);
+            color: white;
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .image-box:hover .image-caption {
+            transform: translateY(0);
+        }
+
+        .figure-title {
+            text-align: center;
+            margin: 20px 0;
+            font-style: italic;
+            color: #343d68;
+        }
+
+        .contact-section {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .image-box {
+                width: 100%;
+                max-width: 400px;
+            }
+            
+            .title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-section">
+        <h1 class="title">Granular Flow in packed bed (Direct Reduced Iron - DRI processes)</h1>
+        
+        <div class="image-container">
+            <div class="image-box">
+                <img src="./assets/images/gf1.gif" alt="COREX shaft furnace">
+                <div class="image-caption">COREX shaft furnace</div>
+            </div>
+            <div class="image-box">
+                <img src="./assets/images/gf1b.gif" alt="MIDREX shaft furnace">
+                <div class="image-caption">MIDREX shaft furnace</div>
+            </div>
+        </div>
+        <div class="figure-title">Figure 1. Schematic of COREX and MIDREX shaft furnaces</div>
+
+        <div class="research-content">
+            <p>Shaft based processes are widely used in many disciplines like chemical, metallurgical, pharmaceutical etc. For example, in metallurgy, they are like Midrex, Blast furnaces, Corex etc.; in chemical like catalytic reformer etc.; and in pharmaceutical like drug coating etc. To maintain the quality of the products in these reactors, it is very important to have a good understanding of the solid flow behaviour along with the gas flow.</p>
+            
+            <p>These types of flow are quite prevalent in the production of Direct Reduced Iron (DRI) in which almost 95% metallization of iron is achieved. In this process, iron ore pellets are reduced by hot CO gas or CO + H2 gas mixture. Usually, the pellets are fed from the top and gas from the bottom; so, it is a counter-current process. Iron ore reduction takes place in solid state and direct reduced iron pellets come out from the bottom. It is a slow-moving bed reactor.</p>
+            
+            <p>From the product quality viewpoint and smooth operation of the reactors, it is very important to know the solid flow behaviour along with its residence time. For example, if some particles residence time is much higher than the others then their reduction behaviour and hence the reactor performance would be quite different which will affect the product quality significantly.</p>
+            
+            <p>Many researchers have tried to understand these processes theoretically, however, the simplifications made by them by making certain assumptions such as potential flow theory and ignoring void fraction variations inside the reactors (which will affect the gas flow profile significantly) have concealed the true behaviour of solid particles in presence of the gas flow.</p>
+            
+            <p>Here, particles/pellets flow has been modelled using <span class="highlight">DEM approach</span> and gas flow has been modelled using <span class="highlight">continuum based CFD approach</span>.</p>
+        </div>
+
+        <div class="image-container">
+            <div class="image-box">
+                <img src="./assets/images/gf2.jpg" alt="Streamlines plot">
+                <div class="image-caption">Streamlines plot</div>
+            </div>
+            <div class="image-box">
+                <img src="./assets/images/gf2b.jpg" alt="Pressure contour plot">
+                <div class="image-caption">Pressure contour plot</div>
+            </div>
+        </div>
+        <div class="figure-title">Figure 2: (a) Streamlines and (b) pressure contour plots in the bed at a gas inlet velocity of 20m/s and solid discharge rate of 0.020kg/s</div>
+
+        <div class="research-content">
+            <p>It can be seen from figure 2(a) that the gas streamlines are not symmetrical especially this effect is more prominent near the deadman. This again enforces that the assumptions of symmetry with respect to gas flow and constant void fraction does not represent the system correctly. The same point is conveyed visibly from figure 4 which shows the pressure contours plot.</p>
+        </div>
+
+        <div class="image-container">
+            <div class="image-box">
+                <img src="./assets/images/gf3.jpg" alt="Void fraction distribution">
+                <div class="image-caption">Void fraction distribution</div>
+            </div>
+            <div class="image-box">
+                <img src="./assets/images/gf3b.jpg" alt="Gas velocity profile">
+                <div class="image-caption">Gas velocity profile</div>
+            </div>
+        </div>
+        <div class="figure-title">Figure 3. (a) Void fraction distribution across the bed width at a distance of 0.14 m from the bottom and (b) corresponding gas velocity profile</div>
+
+        <div class="research-content">
+            <p>Figures 3(a) shows the typical void fraction distribution across the bed width at the height 0.14 m from the bottom of the shaft. One can see the variation in void fraction across the bed width which is not symmetric in nature, emphasizing the point that it cannot be considered as constant. Corresponding to the void fractions figures 5(a), the gas velocity profiles across the bed is shown in figure 3(b). One can see quite different velocity profile across the bed width reflecting the variation of void fraction and quite far away from the symmetry.</p>
+        </div>
+
+        <div class="contact-section">
+            <p><strong>For further details, queries, or publications related to this research, please <a href="./contact.html">contact us</a> through our contact information on the website.</strong></p>
+        </div>
+    </div>
+</body>
+</html>

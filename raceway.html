@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raceway Hysteresis - RESCONS</title>
+    <style>
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .title {
+            color: #343d68;
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+            animation: slideInDown 0.8s ease-out;
+        }
+
+        .research-content {
+            line-height: 1.6;
+            text-align: justify;
+            animation: slideInUp 1s ease-out;
+        }
+
+        .section-title {
+            color: #e84949;
+            font-size: 24px;
+            margin: 30px 0 20px;
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        .highlight {
+            color: #e84949;
+            font-weight: bold;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            animation: fadeIn 1.2s ease-in;
+        }
+
+        .image-box {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-box:hover {
+            transform: scale(1.02);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(232, 73, 73, 0.9);
+            color: white;
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .image-box:hover .image-caption {
+            transform: translateY(0);
+        }
+
+        .contact-section {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .image-box {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-section">
+        <h1 class="title">RACEWAY HYSTERESIS</h1>
+        
+        <div class="research-content">
+            <p>This research is of fundamental in nature and our research group is the first to identify, explore and explain the cavity hysteresis phenomena in a packed bed. The group has contributed significantly in understanding this phenomenon both experimentally and theoretically.</p>
+        </div>
+
+        <h2 class="section-title">Hysteresis in Stationary Bed</h2>
+        
+        <div class="research-content">
+            <p>When gas is injected in a packed bed through a nozzle, a gas cavity is formed in front of the nozzle. This gas cavity increases in size with increasing gas velocity, and finally breaks after a certain gas velocity is crossed. A phenomenon observed during cavity formation is that of cavity size hysteresis.</p>
+            
+            <p>If the gas velocity is increased till a certain maximum velocity (well below cavity breaking limit), and then decreased slowly, the cavity size remains unchanged till a certain gas velocity and then starts decreasing with decreasing gas velocity. This is termed as cavity size hysteresis.</p>
+        </div>
+
+        <div class="image-container">
+            <div class="image-box">
+                <img src="./assets/images/raceway1.jpg" alt="Cavity Size Hysteresis">
+                <div class="image-caption">Figure 1: Cavity Size Hysteresis Demonstration</div>
+            </div>
+        </div>
+
+        <div class="research-content">
+            <p>The size of cavity is very important as it dictates the gas penetration into the bed. This has great implications in the Blast Furnace study, where this cavity is termed as the raceway. A pseudo 2-D model has been developed by our group to predict this hysteresis in cavity size.</p>
+            
+            <p>To establish the exact cause and nature of cavity size hysteresis, 2-D studies were carried out considering the packing as granular medium and studying it's interaction with changing gas flow. Both continuum and discrete element method (DEM) based models have been developed for granular material and it's interaction with gas flow was studied.</p>
+            
+            <p>It is found that inter-particle interaction forces along with gas drag and bed porosity play an important role in describing the cavity size hysteresis. The injection of gas flow allows the particles to go to an unconstrained state than they were previously in, and their ability to remain in that state, even under decreased gas drag force, leads to the phenomenon of cavity size hysteresis.</p>
+        </div>
+
+        <div class="image-container">
+            <div class="image-box">
+                <img src="./assets/images/raceway2.jpg" alt="Theory Applications">
+                <div class="image-caption">Figure 2: Applications of the Theory</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <div class="image-box">
+                <img src="./assets/images/raceway3.jpg" alt="Theory Applications">
+                <div class="image-caption">Figure 3: Applications of the Theory</div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Hysteresis in Moving Bed</h2>
+        
+        <div class="research-content">
+            <p>Above results confirm the existence of the cavity hysteresis phenomenon in a stationary packed bed. However, there are many reactors (such as blast furnace and catalytic reactor) which have cavity/raceway presence in moving bed. Therefore, studied have been carried out for cavity hysteresis in moving bed.</p>
+            
+            <p>For moving beds, it is found that the cavity hysteresis phenomenon is absent, except at a very low particles flow rate. It is also observed that raceway size in the moving bed is independent of the bed height and solid mass flow rate, except for a very low solid/particles flow rates.</p>
+            
+            <p>Results confirm the previous hypothesis that if there are no frictional forces then there would not be any raceway hysteresis in the system. The study also confirms that the raceway size obtained in a stationary packed bed for decreasing gas velocity condition is similar to that obtained in the moving beds.</p>
+        </div>
+
+        <div class="image-container">
+            <div class="image-box">
+                <img src="./assets/images/raceway4.jpg" alt="Raceway Size Comparison">
+                <div class="image-caption">Figure 4: Comparison of raceway size hysteresis in stationary and moving bed at 800mm bed height</div>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <p><strong>For further details, queries, or publications related to this research, please <a href="./contact.html">contact us</a> through our contact information on the website.</strong></p>
+        </div>
+    </div>
+</body>
+</html>

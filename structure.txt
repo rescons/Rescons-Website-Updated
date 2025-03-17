@@ -1,0 +1,119 @@
+.
+├── README.md
+├── about.html
+├── assets
+│   ├── images
+│   │   ├── adanipower.jpg
+│   │   ├── atom.png
+│   │   ├── award.png
+│   │   ├── bill.PNG
+│   │   ├── book.png
+│   │   ├── carburizing1.jpg
+│   │   ├── carburizing2.png
+│   │   ├── carburizing3.png
+│   │   ├── carburizing4.png
+│   │   ├── carburizing5.png
+│   │   ├── carburizing6.png
+│   │   ├── carburizing7.png
+│   │   ├── carburizing8.png
+│   │   ├── clock.PNG
+│   │   ├── earth.png
+│   │   ├── favicon.png
+│   │   ├── fire.png
+│   │   ├── flask.png
+│   │   ├── furnace.mp4
+│   │   ├── future.jpg
+│   │   ├── future.mp4
+│   │   ├── headset.PNG
+│   │   ├── home.mp4
+│   │   ├── house.PNG
+│   │   ├── industry.jpg
+│   │   ├── industry.png
+│   │   ├── jspl.jpeg
+│   │   ├── r.jpg
+│   │   ├── rescons_logo.jpg
+│   │   ├── research-image.jpg
+│   │   ├── resimg.JPG
+│   │   ├── sic1.png
+│   │   ├── sic2.png
+│   │   ├── sic3.png
+│   │   ├── testimonial-1.png
+│   │   ├── testimonial-2.jpg
+│   │   ├── testimonial-3.jpg
+│   │   ├── testimonial-4.jpg
+│   │   ├── testimonial-5.jpg
+│   │   ├── users.png
+│   │   └── wifi.PNG
+│   └── w3logo.doc
+├── boronCarbide.html
+├── career1.html
+├── careers.html
+├── contact.html
+├── gasCarburising.html
+├── gasFinesFlow.html
+├── gasLiquidFlow.html
+├── granularFlowBeds.html
+├── granulation.html
+├── granulationIronOreSintering.html
+├── greenIronmaking.html
+├── heapLeaching.html
+├── hydrogenReduction.html
+├── index.html
+├── js
+│   ├── about.js
+│   ├── carburizing.js
+│   ├── careers.js
+│   ├── contact.js
+│   ├── publications.js
+│   ├── research.js
+│   ├── services.js
+│   └── sic.js
+├── packCarburizing.html
+├── package-lock.json
+├── package.json
+├── packedBedsFlowVisualization.html
+├── privacy.html
+├── publications.html
+├── raceway.html
+├── rareEarth.html
+├── reda.html
+├── research.html
+├── sandReplacement.html
+├── services.html
+├── siliconCarbide.html
+├── sprayForming.html
+├── structure.txt
+├── styles
+│   ├── about.css
+│   ├── boronCarbide.css
+│   ├── career1.css
+│   ├── careers.css
+│   ├── contact.css
+│   ├── gasCarburising.css
+│   ├── gasFinesFlow.css
+│   ├── gasLiquidFlow.css
+│   ├── granularFlowBeds.css
+│   ├── granulation.css
+│   ├── granulationIronOreSintering.css
+│   ├── greenIronmaking.css
+│   ├── heapLeaching.css
+│   ├── home.css
+│   ├── hydrogenReduction.css
+│   ├── packCarburizing.css
+│   ├── packedBedsFlowVisualization.css
+│   ├── privacy.css
+│   ├── publications.css
+│   ├── raceway.css
+│   ├── rareEarth.css
+│   ├── reda.css
+│   ├── research.css
+│   ├── sandReplacement.css
+│   ├── services.css
+│   ├── siliconCarbide.css
+│   ├── sprayForming.css
+│   ├── terms.css
+│   └── zincCoating.css
+├── terms.html
+└── zincCoating.html
+
+5 directories, 112 files

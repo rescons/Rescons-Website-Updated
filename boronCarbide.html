@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacture of Boron Carbide - RESCONS</title>
+    <style>
+        /* Previous styles remain the same until image-section */
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .title {
+            color: #343d68;
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+            animation: slideInDown 0.8s ease-out;
+        }
+
+        .research-content {
+            line-height: 1.6;
+            text-align: justify;
+            animation: slideInUp 1s ease-out;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            color: #e84949;
+            font-weight: bold;
+        }
+
+        .tech-specs {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #e84949;
+        }
+
+        /* Updated image section styles */
+        .image-section {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            animation: fadeIn 1.2s ease-in;
+        }
+
+        .image-box.process-image {
+            width: 548px;
+            height: 205px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .image-box.process-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .graph-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        .graph-box {
+            width: calc(50% - 20px);
+            min-width: 300px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .graph-box:hover {
+            transform: scale(1.02);
+        }
+
+        .image-caption {
+            padding: 15px;
+            background: white;
+            text-align: center;
+            font-size: 0.9em;
+            color: #343d68;
+        }
+
+        .contact-section {
+          margin-top: 40px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .image-box.process-image {
+                width: 100%;
+                height: auto;
+                max-width: 548px;
+            }
+            
+            .graph-box {
+                width: 100%;
+            }
+            
+            .content-section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-section">
+        <h1 class="title">MANUFACTURE OF BORON CARBIDE</h1>
+
+        <div class="image-section">
+            <div class="image-box">
+                <img src="./assets/images/boc1.jpg" alt="Boron carbide process in operation">
+                <div class="image-caption">Figure 1: Boron carbide process in operation</div>
+            </div>
+        </div>
+
+        <!-- Rest of the content remains the same -->
+        <div class="research-content">
+            <p>Boron carbide is produced in a heat resistance furnace using boric oxide and petroleum coke as the raw materials. In this process, a large current is passed through the graphite rod located at the center of the cylindrical furnace, which is surrounded by the coke and boron oxide mixture. Heat is generated at the surface of the electrode, due to which boron oxide reacts with the coke to produce boron carbide (Figure 1).</p>
+            
+            <p>The process is inefficient in terms of the production of boron carbide as only <span class="highlight">15% charge gets converted into boron carbide</span>. No published attempt has been made to optimise the process using mathematical modelling. Also, experimentally not much work has been done. Therefore, in this first ever study both mathematical and physical modelling has been carried out.</p>
+        </div>
+
+        <div class="tech-specs">
+            <p>A laboratory scale hot model of the process has been fabricated and installed with necessary accessories, such as:</p>
+            <ul>
+                <li>Powder supply unit</li>
+                <li>Electrode cooling unit</li>
+                <li>Stainless steel body</li>
+                <li>High temperature ceramic wool insulation</li>
+            </ul>
+            <p>Temperature inside the furnace ranges from <span class="highlight">2600°C</span> (near the core) to <span class="highlight">900°C</span> (near the charge surface).</p>
+        </div>
+
+        <div class="graph-container">
+            <div class="graph-box">
+                <img src="./assets/images/boc2.jpg" alt="Temperature vs. relative emissivity graph">
+                <div class="image-caption">Figure 2: Plot of temperature vs. relative emissivity for graphite electrode</div>
+            </div>
+            <div class="graph-box">
+                <img src="./assets/images/boc3.jpg" alt="Temperature vs. porosity graph">
+                <div class="image-caption">Figure 3: Plot of temperature vs. porosity variation for boric acid and graphite mixture</div>
+            </div>
+            <div class="graph-box">
+                <img src="./assets/images/boc4.jpg" alt="Simulation results comparison">
+                <div class="image-caption">Figure 4: Comparison of simulated (1D & 2D) results with experimental core temp</div>
+            </div>
+        </div>
+
+        <div class="research-content">
+            <p>In mathematical modelling, simultaneous heat and mass transfer model has been developed for the resistance-heating furnace, considering boron carbide formation as a typical carbothermal reduction. Coupled transient, partial differential equations have been worked out. These equations have been solved numerically, using the implicit finite volume method to obtain the profiles of temperature and volume fraction reacted (B4C formation) in the furnace.</p>
+            
+            <p>After incorporation of the necessary corrections, a good match is found between the computed and experimental results. This gives a fine example that how a mathematical model can be used to improve the physical model. A Graphical User Interface for the process has also been developed. This process has been optimised experimentally now. A 2-D mathematical model with GUI is also available for the process.</p>
+        </div>
+
+        <div class="contact-section">
+          <h3>Technology Transfer Opportunity</h3>
+            <p>This technology and software are ready to transfer to interested industries (Currently under negotiation with Indian Armour Systems Pvt. Ltd.). Interested industries/person, even to setup a plant or transfer of technology can <a href="./contact.html">contact us</a>.</p>
+          <p><strong>For further details, queries, or publications related to this research, please <a href="./contact.html">contact us</a> through our contact information on the website.</strong></p>
+        </div>
+    </div>
+</body>
+</html>

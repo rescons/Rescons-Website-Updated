@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Liquid Flow - RESCONS</title>
+    <style>
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .title {
+            color: #343d68;
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+            animation: slideInDown 0.8s ease-out;
+        }
+
+        .research-content {
+            line-height: 1.6;
+            text-align: justify;
+            animation: slideInUp 1s ease-out;
+        }
+
+        .highlight {
+            color: #e84949;
+            font-weight: bold;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .image-box {
+            position: relative;
+            width: 600px;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-box:hover {
+            transform: scale(1.05);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(232, 73, 73, 0.9);
+            color: white;
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .image-box:hover .image-caption {
+            transform: translateY(0);
+        }
+
+        .contact-section {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .image-box {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-section">
+        <h1 class="title">MODELING LIQUID FLOW IN PRESENCE OF GAS FLOW IN PACKED BEDS</h1>
+        
+        <div class="research-content">
+            <p>In our group, the focus is on the study of flow of non-wetting liquid through a porous media under the influence of gas. In many metallurgical reactors, we have situations where the liquid phase is non-wetting and it flows counter current or co current or even cross current to the gas phase.</p>
+            
+            <p>A typical example of this is the lower part of an iron making blast furnace where molten metal and slag descend over the coke matrix, cross current and counter current to the gas flow. Research has shown that non-wetting liquid flows as droplets and rivulets, falling through the bed, and continuously breaking and joining with each other.</p>
+            
+            <p>This is different from wetting flows where the liquid phase flows as film around the packing particles. Under the influence of gas, especially laterally injected gas, the liquid holdup in the bed is also quite different as compared to gas liquid counter current or co current flow conditions.</p>
+            
+            <p>Hence, our efforts have been directed towards the direction of a fundamental understanding of the nature of motion of these droplets and rivulets falling through the bed. We try to model the discrete behavior of liquid flow through a <span class="highlight">force balance approach</span> postulated by <span class="highlight">Gupta et al.</span> (1996, 1997).</p>
+        </div>
+
+        <div class="image-container">
+            <div class="image-box">
+                <img src="./assets/images/gasLiquidFlow1.png" alt="Theory vs Experimental Results">
+                <div class="image-caption">Figure 1: Comparison between proposed theory and experimental results</div>
+            </div>
+            <div class="image-box">
+                <img src="./assets/images/gasLiquidFlow2.png" alt="Blast Furnace Application">
+                <div class="image-caption">Figure 2: Application in Ironmaking blast furnace</div>
+            </div>
+        </div>
+
+        <div class="research-content">
+            <p>We have postulated a new theory to model the non-wetting flow in a packed bed considering the liquid flow as discrete in nature. Liquid rupture theory has also been incorporated recently in order to use this theory for wider applications.</p>
+            
+            <p>The gas flow has been modeled by solving Navier-Stoke equation in turbulent condition. We employ <a href="./packedBedsFlowVisualization.html">x-ray technique</a> for liquid flow visualization in a packed bed to validate our results.</p>
+            
+            <p>Flow of slag and iron at 40 m/s increasing gas blast velocity. Efforts are underway in our group to model liquid flow path in the random bed considering various liquid holdups, so as to gain a proper understanding of the gas-liquid maldistribution in the bed. Also the effect of <a href="./raceway.html">raceway hysteresis</a> on gas-liquid flow is being investigated.</p>
+        </div>
+
+        <div class="contact-section">
+            <p><strong>For further details, queries, or publications related to this research, please <a href="./contact.html">contact us</a> through our contact information on the website.</strong></p>
+        </div>
+    </div>
+</body>
+</html>

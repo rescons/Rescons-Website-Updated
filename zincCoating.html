@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zinc Coating Process - RESCONS</title>
+    <style>
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .title {
+            color: #343d68;
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+            animation: slideInDown 0.8s ease-out;
+        }
+
+        .research-content {
+            line-height: 1.8;
+            text-align: justify;
+            animation: slideInUp 1s ease-out;
+            margin-bottom: 30px;
+        }
+
+        .section-heading {
+            color: #e84949;
+            font-size: 24px;
+            margin: 30px 0 20px;
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        .image-container {
+            position: relative;
+            margin: 30px auto;
+            max-width: 800px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .image-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(232, 73, 73, 0.95);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .image-container:hover .image-caption {
+            transform: translateY(0);
+        }
+
+        .split-image-container {
+            display: flex;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .split-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .split-image:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .split-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .split-image .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(232, 73, 73, 0.95);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .split-image:hover .image-caption {
+            transform: translateY(0);
+        }
+
+        .contact-section {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        @media (max-width: 768px) {
+            .split-image {
+                min-width: 100%;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .split-image {
+                min-width: 100%;
+            }
+
+            .title {
+                font-size: 24px;
+            }
+
+            .section-heading {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-section">
+        <h1 class="title">Improvement in Zn utilization in the Zinc Coating process to reduce specific consumption</h1>
+
+        <div class="research-content">
+            <p>We studied and optimized the Zinc coating process using an Arc Spray gun so that Zn wastage can be
+                reduced during the coating operation on ductile iron pipe in the Tata Metalliks (TM) plant. The zinc is
+                normally applied automatically by traversing a multiple of arc spray heads over a rotating pipe held by
+                cones at both ends. The minimum coating deposition is determined (as per IS:8329) by the traverse and
+                rotating speed of the pipe along with the amount and throughput rate of arc spray heads being used.</p>
+
+            <p>Figure 1 shows a schematic diagram of Zn coating on a ductile iron pipe. The coating material that is
+                used in this process is introduced in the form of two electrically conductive consumable wires. The
+                below figure shows the schematic of the wire-arc spraying nozzle and the part of the setup of the Zn
+                coating process, which is used at Tata Metaliks (TM).</p>
+        </div>
+
+        <div class="image-container">
+            <img src="./assets/images/zn1.gif" alt="Zn coating process">
+            <div class="image-caption">
+                Figure 1: Zn coating process on a pipe under optimum conditions to reduce Zn wastage
+            </div>
+        </div>
+
+        <div class="research-content">
+            <p>The gun geometry is designed in such a way that the wire tips are separated by a distance of about a few
+                tenths of a millimeter from one another. An electric voltage is applied on the two wires, which causes
+                an arc in the tip's gap and produces a thin layer of molten Zn. A stream of atomizing gas, as shown in
+                the above figure, strips the molten layer off the wire tips and propels it toward the pipe surface. The
+                detached molten droplets undergo further atomization to produce smaller droplets, which are deposited on
+                the substrate one over another, where they solidify and form a coating layer. This process involves many
+                complex phenomena, such as the interaction of molten metal droplets with the surrounding atmosphere
+                through convection, impingement of molten metal droplets on the substrate, and phase change of droplets
+                involving the latent heat release.</p>
+
+            <p>Indeed, there is no literature available on the mathematical modelling of metal coating on a rotating
+                surface such as a pipe (in this case). This study has been done using Ansys Fluent.</p>
+        </div>
+
+        <h2 class="section-heading">Validation of the model:</h2>
+
+        <div class="research-content">
+            <p>A comparison between the ad hoc experiments and numerical pressure results is shown on the left side of
+                figure 2(a) below. It can be observed from the plot that a reasonable match between the ad hoc
+                experiment and numerical results is obtained, providing some confidence in a developed numerical model
+                to use for further study. Another comparison with gas velocity contours for a mass-flow-rate of 0.0123
+                kg/s is shown on the right side of figure 2(b) below. The left image (in this figure) represents the
+                velocity contour from ref. (Amir Hossein Pourmousa Abkenar, PhD Thesis, University of Toronto, 2007) and
+                the right image represents the velocity contour of the present simulation.</p>
+        </div>
+
+        <div class="split-image-container">
+            <div class="split-image">
+                <img src="./assets/images/zn2a.png" alt="Experimental and numerical comparison">
+                <div class="image-caption">
+                    Figure 2: (a) Comparison of experimental and numerical pressure
+                </div>
+            </div>
+            <div class="split-image">
+                <img src="./assets/images/zn2b.png" alt="Experimental and numerical comparison">
+                <div class="image-caption">Figure 2: (b) Contours of gas velocity for
+                    mass-flow-rate of 0.0123 kg/s</div>
+            </div>
+        </div>
+
+
+
+        <div class="image-container">
+            <img src="./assets/images/zn3.png" alt="Particle distribution">
+            <div class="image-caption">
+                Figure 3: Particle breakup and temperature distribution contours
+            </div>
+        </div>
+
+        <div class="research-content">
+            <p>Figure 3 shows the distribution of temperature of particles and particle distribution due to
+                splashing (except in 20 µm size particles where splashing is not considered). Pipe temperature is
+                maintained at 423K, and for better visualization of temperature, it is constrained to 450K. The
+                figure shows clearly how the child droplets are generated after hitting the pipe surface.
+                Lower-diameter particles achieve low temperatures very fast and may get solidified in the flight
+                before they reach the surface of the pipe.</p>
+
+            <p>In the actual Zn coating process, the spray gun is located at an angle, as shown in figure 4 below.
+                Some results of this geometry are shown below.</p>
+        </div>
+
+        <h2 class="section-heading">Effect of spray distance:</h2>
+        <h3 class="section-heading">Velocity Contour</h3>
+
+        <div class="split-image-container">
+            <div class="split-image">
+                <img src="./assets/images/zn4a.png" alt="Spray distance 245mm">
+                <div class="image-caption">Spray distance 245mm</div>
+            </div>
+            <div class="split-image">
+                <img src="./assets/images/zn4b.png" alt="Spray distance 200mm">
+                <div class="image-caption">Spray distance 200mm</div>
+            </div>
+        </div>
+
+        <div class="research-content">
+            <p>Figure 4 shows the air velocity contours for different spray distances. It is observed that when the
+                spray distance is decreased, the flow is diverted away from the nozzle significantly, which may
+                reduce the nozzle clogging.</p>
+        </div>
+
+        <h3 class="section-heading">Wall film thickness</h3>
+
+        <div class="split-image-container">
+            <div class="split-image">
+                <img src="./assets/images/zn5a.png" alt="Wall film thickness 245mm">
+                <div class="image-caption">Spray distance 245mm - Zn coating thickness</div>
+            </div>
+            <div class="split-image">
+                <img src="./assets/images/zn5b.png" alt="Wall film thickness 200mm">
+                <div class="image-caption">Spray distance 200mm - Zn coating thickness</div>
+            </div>
+        </div>
+
+        <div class="research-content">
+            <p>Figure 5 shows the Zn coating thickness which is obtained under two spray distances. From this
+                figure, the maximum thickness (about 6.9 µm) is obtained for the case of 245mm spray distance, while
+                it is about 0.1 µm when the distance is reduced to 200mm. Also, in reduced spray distance, the film
+                thickness is not uniform/continuous but broken in structure. It is observed that the critical
+                parameter here is adhesion correlation.</p>
+        </div>
+        <div class="contact-section">
+            <p><strong>For further details, queries, or publications related to this research, please <a
+                        href="./contact.html">contact us</a> through our contact information on the website.</strong>
+            </p>
+        </div>
+
+    </div>
+</body>
+
+</html>

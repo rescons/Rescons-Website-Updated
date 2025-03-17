@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heap Leaching - RESCONS</title>
+    <style>
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .title {
+            color: #343d68;
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+            animation: slideInDown 0.8s ease-out;
+        }
+
+        .subtitle {
+            color: #343d68;
+            font-size: 28px;
+            margin: 20px 0;
+            text-align: center;
+            animation: slideInDown 1s ease-out;
+        }
+
+        .research-content {
+            line-height: 1.8;
+            text-align: justify;
+            animation: slideInUp 1s ease-out;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            color: #e84949;
+            font-weight: bold;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            animation: fadeIn 1.2s ease-in;
+        }
+
+        .image-box {
+            position: relative;
+            width: 500px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .single-image-box {
+            position: relative;
+            width: 500px;
+            height: 330px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            margin: 40px auto;
+            /* Centers the box */
+            display: block;
+            /* Ensures proper centering */
+        }
+
+        .single-image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(232, 73, 73, 0.9);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .single-image-box:hover .single-image-caption {
+            transform: translateY(0);
+        }
+
+        .image-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .single-image-box img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(232, 73, 73, 0.9);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+
+        .image-box:hover .image-caption {
+            transform: translateY(0);
+        }
+
+        .key-points {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            animation: slideInUp 1.2s ease-out;
+        }
+
+        .contact-section {
+            margin-top: 40px;
+            padding: 25px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+            border-left: 4px solid #e84949;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-box {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .title {
+                font-size: 28px;
+            }
+
+            .subtitle {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-section">
+        <h1 class="title">Development of Heap Leaching using Discrete Liquid Flow Theory for Multi-particle System</h1>
+
+        <h2 class="subtitle">HEAP LEACHING</h2>
+
+        <div class="research-content">
+            <p>Heap leaching is being studied with renewed interest as metal content in many ores has decreased
+                worldwide. Moreover, it is more economical and <span class="highlight">environmentally friendly</span>
+                than other extraction routes of metals, such as pyrometallurgy.</p>
+
+            <p>Heap leaching is one of those processes where liquid flows in rivulet and droplet form. In heap leaching,
+                lean ore such as <span class="highlight">Cu, Ni and U</span> are used to extract the metal.</p>
+        </div>
+
+        <div class="key-points">
+            <p>In the present study, the liquid flow behaviour is studied in a heap in terms of:</p>
+            <ul>
+                <li>Tortuosity</li>
+                <li>Liquid distribution</li>
+                <li>Contact angle</li>
+                <li>Various sizes of particles</li>
+                <li>Simultaneous irrigation of the bed with multiple inlets</li>
+            </ul>
+        </div>
+
+        <div class="single-image-box">
+            <img src="./assets/images/hl.png" alt="Discrete liquid flow with spatial variation">
+            <div class="single-image-caption">
+                Discrete liquid flow with spatial variation in void; top is heap leaching application with 3D X-ray
+                image. Model capturing the droplet/rivulet flow with their rupture
+            </div>
+        </div>
+
+        <div class="research-content">
+            <p>The novelty of this work is that it captures the correct nature of the liquid flow (which is discrete) in
+                a random heap leaching bed deterministically, which has been lacking until now. <span
+                    class="highlight">Discrete Element Method (DEM)</span>, which is an effective tool to simulate
+                granular materials, is used to pack a 2D vertical heap, as shown in Fig 1.</p>
+        </div>
+
+        <div class="image-container">
+            <div class="image-box">
+                <img src="./assets/images/hl1.jpg" alt="2D Vertical Heap">
+                <div class="image-caption">Figure 1: 2D vertical heap packed using DEM</div>
+            </div>
+            <div class="image-box">
+                <img src="./assets/images/hl2.jpg" alt="Liquid Stream Merging">
+                <div class="image-caption">Figure 2: Merging of liquid streams with multiple inlets</div>
+            </div>
+        </div>
+
+        <div class="research-content">
+            <p>Fig 2 shows that the merging of liquid streams increases when the number of liquid inlets increases,
+                reducing the potential area of the bed that can be exposed to the liquid. The merging of the liquid
+                streams is more prominent towards the bottom of the packing as compared to the top. The liquid disperses
+                or spreads as it descends the bed merging with the neighbouring liquid streams.</p>
+        </div>
+
+        <div class="contact-section">
+            <p><strong>For further details, queries, or publications related to this research, please <a
+                        href="./contact.html">contact us</a> through our contact information on the website.</strong>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

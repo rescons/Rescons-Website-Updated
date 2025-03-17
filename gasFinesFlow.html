@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GasFinesFlow - RESCONS </title>
+    <link rel="icon" href="./assets/images/favicon.png" />
+    <style>
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .title {
+            color: #343d68;
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+            animation: slideInDown 0.8s ease-out;
+        }
+
+        .coming-soon {
+            color: #e84949;
+            font-size: 24px;
+            text-align: center;
+            margin: 20px 0;
+            animation: pulse 2s infinite;
+        }
+
+        .research-content {
+            line-height: 1.8;
+            text-align: justify;
+            animation: slideInUp 1s ease-out;
+            margin: 30px 0;
+        }
+
+        .highlight {
+            color: #e84949;
+            font-weight: bold;
+        }
+
+        .diagram-container {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .diagram-box {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .diagram-box:hover {
+            transform: scale(1.02);
+        }
+
+        .diagram-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .contact-section {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-section:hover {
+            background: #e8e8e8;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .diagram-box {
+                width: 100%;
+                height: 300px;
+            }
+
+            .research-content {
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+            <div class="content-section">
+            <h1 class="title">TWO PHASE FLOW IN METALLURGICAL PROCESSES</h1>
+
+            <div class="coming-soon">COMING SOON.......</div>
+
+            <div class="research-content">
+                <p>Two-phase flow are quite prevalent in metallurgical, chemical and petroleum engineering such as blast
+                    furnaces, catalytic reformer, dedusting, etc. They are not fully understood yet.</p>
+
+                <p>For example, in ironmaking blast furnace (BF) the <span class="highlight">pulverised coal</span> is
+                    injected through the tuyere. Increasing the injection rate of the coal will increase the amount of
+                    unburnt coal in the blast furnace, which will ultimately reduce the permeability of it.</p>
+
+                <p>This unburnt coal from the PC injection deposited between the coke particles and coke layers in the
+                    stack region. This deposition (known as <span class="highlight">static holdup of coal/fines</span>)
+                    results in the reduction of permeability of the BF and thus offering resistance for gas flow,
+                    causing reduced productivity of BF.</p>
+
+                <p>The coal fine which is carried away by the gas inside the furnace is known as <span
+                        class="highlight">dynamic holdup of coal fines</span> which also reduces the permeability of the
+                    BF.</p>
+            </div>
+
+            <!-- <div class="diagram-container">
+                <div class="diagram-box">
+                    <img src="/api/placeholder/600/400" alt="Two Phase Flow Diagram">
+                </div>
+            </div> -->
+
+            <div class="contact-section">
+                <p><strong>For further details, queries, or publications related to this research, please <a href="./contact.html">contact us</a> through our contact information on the website.</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

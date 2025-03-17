@@ -1,0 +1,22 @@
+{
+  "name": "rescons",
+  "version": "1.0.0",
+  "description": "--> This website is made with latest technological frameworks and would be eeasy to maintain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.8.2",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.9.16",
+    "styled-components": "^6.1.13"
+  }
+}

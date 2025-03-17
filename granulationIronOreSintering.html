@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Granulation/Pelletisation-cum-Iron Ore Sintering - RESCONS</title>
+    <style>
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .title {
+            color: #343d68;
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+            animation: slideInDown 0.8s ease-out;
+        }
+
+        .research-content {
+            line-height: 1.6;
+            text-align: justify;
+            animation: slideInUp 1s ease-out;
+        }
+
+        .highlight {
+            color: #e84949;
+            font-weight: bold;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .image-box {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .image-box:hover {
+            transform: scale(1.05);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(232, 73, 73, 0.9);
+            color: white;
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .image-box:hover .image-caption {
+            transform: translateY(0);
+        }
+
+        .process-diagram {
+            width: 100%;
+            height: 100%;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .model-comparison {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            animation: fadeIn 1.2s ease-in;
+        }
+
+        .contact-section {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-box {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-section">
+        <h1 class="title">Modelling of Granulation/Pelletisation-cum-Iron Ore Sintering Process</h1>
+
+        <div class="research-content">
+            <p>Sintering of iron ore is an integral part of iron making to improve the performance of Blast Furnaces.
+                The process of sintering is preceded by the preparation of sinter charge mix where the base mix material
+                (iron ore, coke breeze, flux, return sinter and water) undergoes agglomeration in a rotating drum.</p>
+
+            <p>The resulting granules are charged on to a moving strand where they are leveled off to form a uniform
+                bed. The top of the bed is ignited with the help of burners to initiate combustion of coke. As the
+                material is conveyed along the strand a heat wave progresses downwards with the combustion of coke and
+                sintering of granules.</p>
+        </div>
+
+        <div class="image-box process-diagram">
+            <img src="./assets/images/gcios1.jpg" alt="Granulation-cum-sintering process">
+            <div class="image-caption">Figure 1: Granulation-cum-sintering process</div>
+        </div>
+
+        <div class="research-content">
+            <p>The air required for combustion is sucked through the surface of the bed and the products of combustion
+                are exhausted through wind boxes situated below the strand. The operating parameters of the sinter
+                strand are controlled in such a way that the completion of sintering (known as <span
+                    class="highlight">burn-through point</span>) takes place just before the last wind box.</p>
+
+            <p>Here, the balling step is more critical. Sub-optimal balling is invariably compensated by slowing the
+                strand speed, lowering the bed height, increasing the firing temperature, etc. Net result is lower
+                productivity. Therefore, balling and sintering steps must be examined in tandem as two interlocking
+                components of the same problem.</p>
+        </div>
+
+        <div class="model-comparison">
+            <p>During the granulation process fines get deposited or layered itself onto coarse particles, as a result
+                granulated product in turn is larger in size and narrower in size distribution than the original feed.
+                Two models have been developed for granulation:</p>
+            <ul>
+                <li><span class="highlight">Model 1:</span> Based on Litster et al. approach</li>
+                <li><span class="highlight">Model 2:</span> Based on Kapur et al. approach</li>
+            </ul>
+        </div>
+
+        <div class="image-container">
+            <div class="image-box">
+                <img src="./assets/images/gcios2.jpg" alt="Model Comparison">
+                <div class="image-caption">Figure 2: Comparison of experimental multicomponent published data against
+                    two model's data</div>
+            </div>
+            <div class="image-box">
+                <img src="./assets/images/gcios3.jpg" alt="Temperature Comparison">
+                <div class="image-caption">Figure 3: Comparison of published experimental temperature in sinter bed at
+                    100mm with computed data</div>
+            </div>
+        </div>
+
+        <div class="research-content">
+            <p>Sintering model is a complex model which considers all the major physico-chemical reactions over a large
+                range of temperature which are taking place during the iron ore sintering such as:</p>
+            <ul>
+                <li>Evaporation/condensation of moisture ahead of the flame front</li>
+                <li>Calcination of limestone near the flame front</li>
+                <li>Coke combustion in the flame front</li>
+                <li>Melting/solidification</li>
+            </ul>
+
+            <p>This sintering model has been combined with the granulation/pelletisation model making it a full
+                comprehensive model which is available today to take care of both granulation-cum-sintering process
+                simultaneously.</p>
+        </div>
+
+        <div class="contact-section">
+            <p><strong>For further details, queries, or publications related to this research, please <a
+            href="./contact.html">contact us</a> through our contact information on the website.</strong>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Visualization - RESCONS</title>
+    <style>
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .title {
+            color: #343d68;
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+            animation: slideInDown 0.8s ease-out;
+        }
+
+        .research-content {
+            line-height: 1.6;
+            text-align: justify;
+            animation: slideInUp 1s ease-out;
+        }
+
+        .highlight {
+            color: #e84949;
+            font-weight: bold;
+        }
+
+        .equipment-details {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #e84949;
+            animation: slideInRight 0.8s ease-out;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .image-box {
+            position: relative;
+            width: 211px;
+            height: 653px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-box:hover {
+            transform: scale(1.05);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-box2 {
+            position: relative;
+            width: 408px;
+            height: 472px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-box2:hover {
+            transform: scale(1.05);
+        }
+
+        .image-box2 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(232, 73, 73, 0.9);
+            color: white;
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .image-box:hover .image-caption {
+            transform: translateY(0);
+        }
+
+        .image-box2:hover .image-caption {
+            transform: translateY(0);
+        }
+
+        .contact-section {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .image-box {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .image-box2 {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .equipment-details {
+                margin: 15px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-section">
+        <h1 class="title">FLOW VISUALIZATION IN PACKED BEDS</h1>
+        
+        <div class="research-content">
+            <p>In our group, we have developed a technique of flow visualization using x-ray, exploiting the principle of x-ray absorption. A medical diagnostic x-ray unit is used to image the packed bed. The main aim of our flow visualization is to study the flow of non-wetting liquid in a packed bed.</p>
+            
+            <div class="equipment-details">
+                <h3>Equipment Specifications</h3>
+                <p>X-ray Unit: <span class="highlight">G.E. medical STENOSCOPE 9000</span></p>
+                <p>Liquid Medium: De-ionized water mixed with a dopant</p>
+                <p>Bed Type: Mono-sized particle packing</p>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <div class="image-box">
+                <img src="./assets/images/flow-visualization1.jpg" alt="Liquid Flow Visualization">
+                <div class="image-caption">Figure 1: Liquid path (dark lines) through the bed under lateral gas injection</div>
+            </div>
+            <div class="image-box2">
+                <img src="./assets/images/flow-visualization2.jpg" alt="Local Liquid Holdups">
+                <div class="image-caption">Figure 2: Various local liquid holdups in packed bed with gas flow</div>
+            </div>
+        </div>
+
+        <div class="research-content">
+            <p>The flow of liquid is recorded on a computer/VCR and the recorded images are processed and stitched to give a complete picture of the bed under liquid flow condition. In the whole digitizing process, only one image processing operation has been used, thus reducing the errors substantially in quantification.</p>
+            
+            <p>Results obtained from this technique have been verified using conventional methods and it has been shown that this method can give better results than the conventional methods. In Figure 1, one can clearly observe the liquid path (dark lines) through the bed, under the influence of gas, injected laterally. It can be seen that gas has pushed the liquid away.</p>
+            
+            <p>Various local holdups (static/dynamic/total) have been obtained in a liquid irrigated bed along with global holdups. Figure 2 shows the various local liquid holdups obtained in a packed bed in presence of gas flow, using this technique. Similarly local axial and transverse dispersion coefficients in a packed bed have been obtained.</p>
+            
+            <p>This technique is being used to quantify the above parameters in presence of gas flow. A mathematical model is also underway to describe the dispersion phenomena in the packed bed based on above experimental findings.</p>
+        </div>
+
+        <div class="contact-section">
+            <p><strong>For further details, queries, or publications related to this research, please <a href="./contact.html">contact us</a> through our contact information on the website.</strong></p>
+        </div>
+    </div>
+</body>
+</html>

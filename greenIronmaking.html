@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Iron Making - RESCONS</title>
+    <style>
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .title {
+            color: #343d68;
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+            animation: slideInDown 0.8s ease-out;
+        }
+
+        .subtitle {
+            color: #e84949;
+            font-size: 24px;
+            margin: 20px 0;
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        .content-block {
+            line-height: 1.6;
+            text-align: justify;
+            margin-bottom: 30px;
+            animation: slideInUp 1s ease-out;
+        }
+
+        .initiative-points {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            animation: fadeIn 1.2s ease-in;
+        }
+
+        .point-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .point-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .point-number {
+            color: #e84949;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 15px;
+            min-width: 30px;
+        }
+
+        .image-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 40px auto;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            animation: scaleIn 1s ease-out;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(52, 61, 104, 0.8);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-container:hover .image-overlay {
+            opacity: 1;
+        }
+
+        .collaboration-section {
+            background: linear-gradient(45deg, #343d68, #e84949);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 40px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: white;
+            color: #e84949;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .update-notice {
+            text-align: center;
+            font-style: italic;
+            margin-top: 30px;
+            color: #666;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .content-section {
+                padding: 15px;
+            }
+            
+            .title {
+                font-size: 28px;
+            }
+            
+            .initiative-points {
+                padding: 20px;
+            }
+            
+            .collaboration-section {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-section">
+        <h1 class="title">Green Ironmaking with Net Zero Carbon</h1>
+        
+        <div class="content-block">
+            <p>Under this initiative, RESCONS Solutions Pvt. Ltd. (RSPL), as a responsible company to ensure a better planet for our future generation, has embarked on an ambitious project on the production of iron with net zero carbon as shown in the figure, below.</p>
+        </div>
+
+        <div class="image-container">
+            <img src="./assets/images/greenfe.png" alt="Green Iron Making Process">
+            <div class="image-overlay">
+                <p>Net Zero Carbon Iron Production Process</p>
+            </div>
+        </div>
+
+        <div class="initiative-points">
+            <h2 class="subtitle">Critical Issues Being Addressed</h2>
+            <div class="point-item">
+                <div class="point-number">1</div>
+                <div>How can we help our farmers use their biomass (rice husks, straws, wheat, maize waste, etc.) in a useful way instead of burning it in the field?</div>
+            </div>
+            <div class="point-item">
+                <div class="point-number">2</div>
+                <div>Buying biomass from local farmers and using it in local industries so that pollution in India and other countries can be reduced substantially.</div>
+            </div>
+            <div class="point-item">
+                <div class="point-number">3</div>
+                <div>Use this biomass to reduce iron ore to produce iron in a net zero carbon process and help India achieve her net zero carbon goal by the year 2070 or earlier.</div>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <p>Under this initiative, RESCONS Solutions is extensively involved in basic and applied research in collaboration with IISc, Bengaluru, and CSIRO Australia and is developing a technology that can be used in industries.</p>
+            <p>RESCONS Solutions is actively testing this technology with a couple of industries and hopes that these trials will be over by the middle of the year 2025. After that, this technology will be available for commercial use.</p>
+        </div>
+
+        <div class="collaboration-section">
+            <h2>Join Us in This Green Revolution</h2>
+            <p>RESCONS Solutions encourages iron/steel, power sectors, etc industries to contact us for more information and possible collaboration.</p>
+            <a href="contact.html" class="cta-button">Contact Us for Collaboration</a>
+        </div>
+
+        <div class="update-notice">
+            Please keep visiting us for updates on it.
+        </div>
+    </div>
+</body>
+</html>

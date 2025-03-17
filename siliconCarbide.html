@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silicon Carbide Manufacturing - RESCONS</title>
+    <style>
+        .content-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .title {
+            color: #343d68;
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+            animation: slideInDown 0.8s ease-out;
+        }
+
+        .research-content {
+            line-height: 1.6;
+            text-align: justify;
+            animation: slideInUp 1s ease-out;
+            margin: 20px 0;
+        }
+
+        .highlight {
+            color: #e84949;
+            font-weight: bold;
+        }
+
+        .image-section {
+            margin: 40px auto;
+            max-width: 600px; 
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        .image-container {
+            position: relative;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            max-width: 100%;
+        }
+
+        .image-container:hover {
+            transform: scale(1.02);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 550px; 
+            object-fit: cover;
+        }
+
+        .sem-images {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 800px; /* Larger max-width for the SEM grid image */
+            margin: 0 auto;
+        }
+
+        .image-caption {
+            background: rgba(232, 73, 73, 0.9);
+            color: white;
+            padding: 12px;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-size: 14px;
+        }
+
+        .image-container:hover .image-caption {
+            transform: translateY(0);
+        }
+
+        .gui-section {
+            margin: 40px auto;
+            max-width: 800px; /* Specific width for GUI images */
+        }
+
+        .contact-section {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        /* Figure title - permanent caption above image */
+        .figure-title {
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #343d68;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content-section {
+                padding: 10px;
+            }
+            
+            .title {
+                font-size: 24px;
+            }
+
+            .image-section,
+            .gui-section {
+                margin: 20px auto;
+            }
+
+            .image-container img {
+                max-height: 300px;
+            }
+
+            .image-caption {
+                font-size: 12px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-section">
+        <h1 class="title">SILICON CARBIDE MANUFACTURING</h1>
+        
+        <div class="image-section">
+            <div class="figure-title">Fig. 1: The Acheson process</div>
+            <div class="image-container">
+                <img src="./assets/images/sic1.png" alt="Acheson process during operation and cross-section">
+                <div class="image-caption">(a) during operation and (b) cross-section of the furnace after the reaction</div>
+            </div>
+        </div>
+
+        <div class="research-content">
+            <p>The Acheson process which is used for the production of silicon carbide, uses petroleum coke and quartz as major raw materials to produce SiC in bulk quantities. SiC is formed by carbothermal reduction process in the heat resistance furnace (Acheson furnace). Figure 1 shows some typical photographs captured during and after the experiment. The area inside the circle in figure 1(b) shows the formation of green-colored SiC. Whereas, outside the circle partially reacted/unreacted materials were found. SiC has extreme hardness, sharpness and good thermal properties and hence it is employed as an abrasive and refractory material.</p>
+        </div>
+
+        <div class="image-section">
+            <div class="figure-title">Figure 2: Schematic cross-sectional view</div>
+            <div class="image-container">
+                <img src="./assets/images/sic2.jpg" alt="Schematic cross-sectional view">
+                <div class="image-caption">Cross sectional view of the resistor furnace after cooling</div>
+            </div>
+        </div>
+
+        <div class="research-content">
+            <p>The main raw materials are SiO2 and C which are made to react at a high temperature. Saw dust and salt (sometimes) are also added, so that saw dust burns and provides pores, facilitating the escape of evolved gases (at high temperature). Firing is done for about 40 hours and after cooling, the side walls are removed. An outer layer of uncombined mixture is broken away, exposing the cylindrical mass of sharp, brilliant crystals. A schematic cross sectional view of the resistor furnace, after cooling, is given in Figure 2. The whole reaction process is very complex and the productivity is low. About 11-15% of total charge is converted into SiC while theoretically it can go up to 42%. Obviously, the process is inefficient and has high potential for improvement. We have studied this process extensively both theoretically and experimentally and have increased its efficiency substantially.</p>
+        </div>
+
+        <div class="image-section sem-images">
+            <div class="figure-title">Figure 3: SEM micrographs of samples</div>
+            <div class="image-container">
+                <img src="./assets/images/sic3.gif" alt="SEM micrographs">
+                <div class="image-caption">Samples collected after experiment (a) 1cm, (b) 2cm, (c) 3cm and (d) 4cm away from the electrode surface</div>
+            </div>
+        </div>
+
+        <div class="research-content">
+            <p>We have developed a robust 1-D and 2-D mathematical models considering conduction, convection and radiation as heat transfer modes. Finite Volume Method has been employed to solve the heat balance equations. To validate the model, an experimental facility has been developed at laboratory scale. Both model and experimental data show a good agreement with each other. A Graphical User Interface for the process has also been developed.</p>
+        </div>
+
+        <div class="gui-section">
+            <div class="figure-title">Figure 4: GUI Visualization</div>
+            <div class="image-container">
+                <img src="./assets/images/sic4.jpg" alt="GUI Contours">
+                <div class="image-caption">GUI developed for the Acheson process to plot the results in contours form</div>
+            </div>
+            
+            <div class="image-container" style="margin-top: 20px;">
+                <img src="./assets/images/sic5.jpg" alt="GUI Results">
+                <div class="image-caption">GUI developed for the Acheson process to plot the results</div>
+            </div>
+        </div>
+
+
+        <div class="contact-section">
+            <p class="highlight">The technology and software are available for industries/individual to use. Interested industries/person can <a href="./contact.html">contact us</a></p>
+            <p><strong>For further details, queries, or publications related to this research, please <a href="./contact.html">contact us</a> through our contact information on the website.</strong></p>
+        </div>
+    </div>
+</body>
+</html>
