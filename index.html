@@ -297,16 +297,6 @@
             margin-top: 60px;
         }
 
-        /* Carousel Hero Section Styles */
-        .carousel-hero-section {
-            width: 100vw;
-            height: 100vh;
-            position: relative;
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
-        }
-
         .carousel-marquee-text {
             display: inline-block;
             font-size: 1.1rem;
@@ -325,161 +315,10 @@
             }
         }
 
-        /* Carousel Container */
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            height: 90vh;
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
-        }
-
-        .carousel-slides {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        .carousel-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .carousel-slide.active {
-            opacity: 1;
-            z-index: 1;
-        }
-
-        .carousel-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            display: block;
-            min-width: 100%;
-            min-height: 100%;
-        }
-
-        /* Overlay Content */
-        .carousel-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
-            z-index: 2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .carousel-content {
-            text-align: center;
-            color: white;
-            padding: 2rem;
-            max-width: 800px;
-            font-family: 'Arial', 'Helvetica', sans-serif;
-        }
-
-        .carousel-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 2rem;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-            line-height: 1.3;
-            font-family: 'Arial Black', 'Arial', sans-serif;
-            letter-spacing: 0.5px;
-        }
-
-        .carousel-title strong {
-            font-weight: 900;
-            font-size: 2.7rem;
-            color: #ffd700;
-            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9);
-            -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
-            display: inline-block;
-            transform: scale(1.05);
-        }
-
-        .carousel-cta-btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: linear-gradient(135deg, #2563eb, #1e40af);
-            color: white;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.2rem;
-            border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .carousel-cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
-            background: linear-gradient(135deg, #1e40af, #1e3a8a);
-        }
-
-        /* Carousel Indicators */
-        .carousel-indicators {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 12px;
-            z-index: 3;
-        }
-
-        .indicator {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid rgba(255, 255, 255, 0.8);
-        }
-
-        .indicator.active {
-            background: white;
-            width: 32px;
-            border-radius: 6px;
-            border-color: white;
-        }
-
-        .indicator:hover {
-            background: rgba(255, 255, 255, 0.8);
-        }
-
         /* Mobile Responsive Styles */
         @media screen and (max-width: 768px) {
             .carousel-marquee-container {
                 margin-top: 60px;
-            }
-
-            .carousel-hero-section {
-                height: 100vh;
-            }
-
-            .carousel-container {
-                height: 100vh;
-                margin: 0;
-                padding: 0;
-            }
-
-            .carousel-marquee-container {
                 padding: 10px 0;
             }
 
@@ -487,58 +326,11 @@
                 font-size: 0.9rem;
                 padding: 0 15px;
             }
-
-            .carousel-content {
-                padding: 1.5rem;
-            }
-
-            .carousel-title {
-                font-size: 1.8rem;
-                margin-bottom: 1.5rem;
-                font-weight: 800;
-            }
-
-            .carousel-title strong {
-                font-size: 2rem;
-                font-weight: 900;
-            }
-
-            .carousel-cta-btn {
-                padding: 0.9rem 2rem;
-                font-size: 1rem;
-            }
-
-            .carousel-indicators {
-                bottom: 20px;
-                gap: 8px;
-            }
-
-            .indicator {
-                width: 10px;
-                height: 10px;
-            }
-
-            .indicator.active {
-                width: 24px;
-            }
         }
 
         @media screen and (max-width: 480px) {
             .carousel-marquee-container {
                 margin-top: 60px;
-            }
-
-            .carousel-hero-section {
-                height: 100vh;
-            }
-
-            .carousel-container {
-                height: 100vh;
-                margin: 0;
-                padding: 0;
-            }
-
-            .carousel-marquee-container {
                 padding: 8px 0;
             }
 
@@ -546,47 +338,14 @@
                 font-size: 0.75rem;
                 padding: 0 10px;
             }
-
-            .carousel-content {
-                padding: 1rem;
-            }
-
-            .carousel-title {
-                font-size: 1.4rem;
-                margin-bottom: 1.2rem;
-                line-height: 1.4;
-                font-weight: 800;
-            }
-
-            .carousel-title strong {
-                font-size: 1.6rem;
-                font-weight: 900;
-            }
-
-            .carousel-cta-btn {
-                padding: 0.8rem 1.5rem;
-                font-size: 0.9rem;
-            }
-
-            .carousel-indicators {
-                bottom: 15px;
-                gap: 6px;
-            }
-
-            .indicator {
-                width: 8px;
-                height: 8px;
-            }
-
-            .indicator.active {
-                width: 20px;
-            }
         }
     </style>
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper" style="width: 100%; max-width: 100%; padding-left: 5%; padding-right: 5%;">
+
+
         <div class="container">
             <!-- navbar section -->
             <div class="navbar">
@@ -661,43 +420,6 @@
         </div>
     </div>
 
-    <!-- Carousel Hero Section -->
-    <div class="carousel-hero-section">
-        <!-- Image Carousel -->
-        <div class="carousel-container">
-            <div class="carousel-slides">
-                <div class="carousel-slide active">
-                    <img src="./assets/images/ad1.JPG" alt="Carousel Image 1">
-                </div>
-                <div class="carousel-slide">
-                    <img src="./assets/images/ad2.jpeg" alt="Carousel Image 2">
-                </div>
-                <div class="carousel-slide">
-                    <img src="./assets/images/ad3.JPG" alt="Carousel Image 3">
-                </div>
-                <div class="carousel-slide">
-                    <img src="./assets/images/ad4.JPG" alt="Carousel Image 4">
-                </div>
-            </div>
-
-            <!-- Overlay Content -->
-            <div class="carousel-overlay">
-                <div class="carousel-content">
-                    <h2 class="carousel-title">🎉 Try our new <strong>Gas Carburizing Software</strong> Demo Version !!!</h2>
-                    <a href="https://gasc.rescons.in/" target="_blank" class="carousel-cta-btn">Try Now</a>
-                </div>
-            </div>
-
-            <!-- Carousel Indicators -->
-            <div class="carousel-indicators">
-                <span class="indicator active" data-slide="0"></span>
-                <span class="indicator" data-slide="1"></span>
-                <span class="indicator" data-slide="2"></span>
-                <span class="indicator" data-slide="3"></span>
-            </div>
-        </div>
-    </div>
-
     <div class="wrapper">
         <div class="container">
             <!-- Hero section -->
@@ -710,7 +432,7 @@
     
 
                 <!-- Left - text -->
-                 <div class="hero-section-left">
+                <div class="hero-section-left">
                     <div class="hero-section-heading home">
                       
                     </div>
@@ -746,12 +468,86 @@
                     </div>
                 </div>
 
-                <!-- Right - video container -->
+                <!-- Right - event gallery -->
                 <div class="hero-section-right">
-                    <div class="video-container">
-                        <iframe src="./assets/images/future.mp4" frameborder="0"
-                            allow="autoplay; fullscreen; picture-in-picture; muted" allowfullscreen
-                            class="vdo"></iframe>
+                    <div class="event-stack" aria-label="Rescons event highlights">
+                        <div class="event-stack-header">
+                            <div>
+                                <p class="eyebrow">Field Notes</p>
+                                <h3>Event Highlights</h3>
+                            </div>
+                            <span class="stack-hint">Scroll to explore</span>
+                        </div>
+                        <div class="event-stack-window">
+                            <div class="event-stack-track">
+                                
+
+                                
+
+                                <a class="event-highlight-card" href="">
+                                    <img src="./assets/images/ad1.JPG" alt="Workshop with industry delegates" />
+                                    <div class="event-highlight-overlay">
+                                        <div>
+                                            <p class="event-tag">Conference</p>
+                                            <h4>Rescons as a Knowledge Partner</h4>
+                                            <p>Building REE Supply Chain Through Technology Localization</p>
+                                        </div>
+                                        <span class="event-link">See agenda →</span>
+                                    </div>
+                                </a>
+
+                                <a class="event-highlight-card" href="rareEarth.html">
+                                    <img src="./assets/images/adanipower.jpg" alt="Collaboration at Adani facility" />
+                                    <div class="event-highlight-overlay">
+                                        <div>
+                                            <p class="event-tag">Alliances</p>
+                                            <h4>Rare Earth Collaboration</h4>
+                                            <p>Partnering with Adani for cleaner extraction routes.</p>
+                                        </div>
+                                        <span class="event-link">Know More →</span>
+                                    </div>
+                                </a>
+
+                                <!-- duplicate set for smooth loop -->
+                                <a class="event-highlight-card" href="greenIronmaking.html">
+                                    <img src="./assets/images/greenfe.png" alt="Green furnace industrial trial" />
+                                    <div class="event-highlight-overlay">
+                                        <div>
+                                            <p class="event-tag">Green Ironmaking</p>
+                                            <h4>Collaboration with CSIRO</h4>
+                                            <p>Investigating sustainable practices in ironmaking</p>
+                                        </div>
+                                        <span class="event-link">Read story →</span>
+                                    </div>
+                                </a>
+
+                                <a class="event-highlight-card" href="">
+                                    <img src="./assets/images/csiro.jpg" alt="Silicon carbide reactor close-up" />
+                                    <div class="event-highlight-overlay">
+                                        <div>
+                                            <p class="event-tag">Rare Earth Element Extraction</p>
+                                            <h4>In Collaboration with CSIRO</h4>
+                                            <p>Design and Synthesis of Selective Extractants for Nd Recovery from Fly Ash of Thermal Power Plants</p>
+                                        </div>
+                                        <span class="event-link">Learn more →</span>
+                                    </div>
+                                </a>
+
+                                
+
+                                <a class="event-highlight-card" href="contact.html">
+                                    <img src="./assets/images/adanipower.jpg" alt="Collaboration at Adani facility" />
+                                    <div class="event-highlight-overlay">
+                                        <div>
+                                            <p class="event-tag">Alliances</p>
+                                            <h4>Rare Earth Collaboration</h4>
+                                            <p>Partnering with Adani for cleaner extraction routes.</p>
+                                        </div>
+                                        <span class="event-link">Partner with us →</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -774,7 +570,7 @@
             <a href="https://gasc.rescons.in/" class="announcement-btn btn-pink" _blank>Try Now</a>
         </div>
 
-        <div class="announcement-card job-openings">
+        <!-- <div class="announcement-card job-openings">
             <h2 class="announcement-title">
                 Career Opportunities
                 <span class="announcement-badge" style="background: #2f3777;">HIRING</span>
@@ -784,7 +580,7 @@
                 and Process Engineering. Be part of cutting-edge research and development in materials engineering.
             </p>
             <a href="careers.html" class="announcement-btn btn-jobs">View Openings</a>
-        </div>
+        </div> -->
     </div>
 
 
@@ -986,57 +782,6 @@
         });
     </script>
 
-    <script>
-        // Carousel Auto-rotation Script
-        (function() {
-            const slides = document.querySelectorAll('.carousel-slide');
-            const indicators = document.querySelectorAll('.indicator');
-            let currentSlide = 0;
-            const totalSlides = slides.length;
-            const slideInterval = 4000; // Change slide every 4 seconds
-
-            function showSlide(index) {
-                // Remove active class from all slides and indicators
-                slides.forEach(slide => slide.classList.remove('active'));
-                indicators.forEach(indicator => indicator.classList.remove('active'));
-
-                // Add active class to current slide and indicator
-                slides[index].classList.add('active');
-                indicators[index].classList.add('active');
-            }
-
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % totalSlides;
-                showSlide(currentSlide);
-            }
-
-            // Auto-rotate slides
-            let carouselInterval = setInterval(nextSlide, slideInterval);
-
-            // Add click event to indicators
-            indicators.forEach((indicator, index) => {
-                indicator.addEventListener('click', () => {
-                    currentSlide = index;
-                    showSlide(currentSlide);
-                    // Reset the interval
-                    clearInterval(carouselInterval);
-                    carouselInterval = setInterval(nextSlide, slideInterval);
-                });
-            });
-
-            // Pause on hover (optional)
-            const carouselContainer = document.querySelector('.carousel-container');
-            if (carouselContainer) {
-                carouselContainer.addEventListener('mouseenter', () => {
-                    clearInterval(carouselInterval);
-                });
-
-                carouselContainer.addEventListener('mouseleave', () => {
-                    carouselInterval = setInterval(nextSlide, slideInterval);
-                });
-            }
-        })();
-    </script>
 </body>
 
 </html>
