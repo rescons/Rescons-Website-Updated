@@ -663,3 +663,337 @@ html {
         width: 49.99%;
     } */
 }
+/* ==========================
+   TRAINING SECTION
+========================== */
+.training-section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Heading */
+.training-heading {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #445088;
+    margin-bottom: 20px;
+}
+
+/* Intro text */
+.training-intro {
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto 60px;
+    line-height: 1.7;
+}
+
+/* Grid */
+.training-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 300px));
+    justify-content: center;
+    gap: 26px;
+}
+
+/* Card */
+.training-card {
+    background: #ffffff;
+    padding: 26px 22px;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Accent bar */
+.training-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: #e4e7f5;
+    border-radius: 18px 18px 0 0;
+}
+
+/* Hover */
+.training-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+/* Text */
+.training-card h3 {
+    font-size: 1rem;
+    color: #1f2a44;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .training-heading {
+        font-size: 1.8rem;
+    }
+
+    .training-intro {
+        font-size: 0.95rem;
+    }
+}
+/* ==========================
+   SHORT TERM PROGRAMS
+========================== */
+.stp-section {
+    max-width: 1200px;
+    margin: 120px auto;
+    padding: 0 20px;
+}
+
+/* Headings */
+.stp-heading {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #445088;
+    margin-bottom: 20px;
+}
+
+.stp-intro,
+.stp-subintro {
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto 25px;
+    line-height: 1.7;
+}
+
+/* Grid */
+.stp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Card */
+.stp-card {
+    background: #ffffff;
+    padding: 28px 26px;
+    border-radius: 18px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.06);
+    position: relative;
+}
+
+.stp-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: #e4e7f5;
+    border-radius: 18px 18px 0 0;
+}
+
+/* Text */
+.stp-card h3 {
+    font-size: 1.05rem;
+    color: #1f2a44;
+    margin-bottom: 10px;
+}
+
+.stp-card p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Upcoming */
+.stp-upcoming {
+    margin-top: 80px;
+}
+
+.upcoming-heading {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #343d68;
+    margin-bottom: 30px;
+}
+
+.upcoming-card {
+    max-width: 800px;
+    margin: 0 auto;
+    border-left: 5px solid #343d68;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .stp-heading {
+        font-size: 1.8rem;
+    }
+
+    .upcoming-heading {
+        font-size: 1.5rem;
+    }
+}
+/* ==========================
+   KNOWLEDGE & PUBLICATIONS
+========================== */
+.knowledge-section {
+    max-width: 1100px;
+    margin: 120px auto;
+    padding: 0 20px;
+}
+
+/* Block spacing */
+.knowledge-block {
+    margin-bottom: 70px;
+}
+
+/* Headings */
+.knowledge-heading {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #445088;
+    margin-bottom: 30px;
+}
+
+/* Card */
+.knowledge-card {
+    background: #ffffff;
+    padding: 32px 30px;
+    border-radius: 20px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.06);
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Highlight card */
+.knowledge-card.highlight {
+    background: linear-gradient(180deg, #f8f9fc, #ffffff);
+    border-left: 5px solid #445088;
+}
+
+/* Stats */
+.stats-card h3 {
+    font-size: 1.3rem;
+    color: #1f2a44;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.stats-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.stats-list li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Software list */
+.software-list {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.software-list li {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+/* Text */
+.knowledge-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .knowledge-heading {
+        font-size: 1.8rem;
+    }
+
+    .knowledge-card {
+        padding: 26px 22px;
+    }
+}
+/* ==========================
+   PATENTS SECTION
+========================== */
+.patents-section {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Heading */
+.patents-heading {
+    font-size: 2.2rem;
+    color: #445088;
+    margin-bottom: 30px;
+}
+
+/* Card */
+.patents-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 22px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.06);
+}
+
+/* Card Title */
+.patents-card h3 {
+    font-size: 1.2rem;
+    color: #1f2a44;
+    margin-bottom: 10px;
+}
+
+/* Big Count */
+.patents-count {
+    font-size: 3rem;
+    color: #343d68;
+    margin: 15px 0;
+}
+
+/* Breakdown */
+.patents-breakdown {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 20px;
+}
+
+.patents-breakdown li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+/* Note */
+.patents-note {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .patents-heading {
+        font-size: 1.8rem;
+    }
+
+    .patents-count {
+        font-size: 2.5rem;
+    }
+}

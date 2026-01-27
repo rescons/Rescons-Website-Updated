@@ -648,3 +648,246 @@ a {
         width: 49.99%;
     } */
   }
+
+  /* ==========================
+   RESEARCH HERO SECTION
+========================== */
+.research-hero {
+    max-width: 1200px;
+    margin: 120px auto;
+    padding: 0 20px;
+}
+
+.research-hero-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* Content */
+.research-heading {
+    font-size: 2.4rem;
+    color: #343d68;
+    margin-bottom: 25px;
+}
+
+.research-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 18px;
+}
+
+/* Pillars */
+.research-pillars {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.research-pillars span {
+    padding: 10px 18px;
+    border-radius: 30px;
+    background: #f1f3fb;
+    color: #1f2a44;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Media */
+.research-media img {
+    width: 100%;
+    border-radius: 22px;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.15);
+    object-fit: cover;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 900px) {
+    .research-hero-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .research-heading {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .research-pillars {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .research-heading {
+        font-size: 1.8rem;
+    }
+
+    .research-text {
+        font-size: 0.95rem;
+    }
+}
+/* ==========================
+   CONTRIBUTIONS SECTION
+========================== */
+.contributions-section {
+    max-width: 1200px;
+    margin: 120px auto;
+    padding: 0 20px;
+}
+
+/* Block */
+.contribution-block {
+    margin-bottom: 80px;
+}
+
+.contribution-block.highlight {
+    background: #f8f9fc;
+    padding: 60px 40px;
+    border-radius: 24px;
+}
+
+/* Heading */
+.contribution-heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #343d68;
+    margin-bottom: 40px;
+}
+
+/* Cards layout */
+.contribution-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Card */
+.contribution-card {
+    background: #ffffff;
+    padding: 30px 26px;
+    border-radius: 18px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.06);
+    position: relative;
+}
+
+.contribution-card::before {
+    /* content: "↳"; */
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-size: 1.2rem;
+    color: #999;
+}
+
+/* Text */
+.contribution-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contribution-block.highlight {
+        padding: 40px 25px;
+    }
+
+    .contribution-heading {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .contribution-heading {
+        font-size: 1.6rem;
+    }
+
+    .contribution-card {
+        padding: 25px 22px;
+    }
+}
+/* ==========================
+   RESEARCH V2
+========================== */
+.research-v2 {
+    max-width: 1400px;
+    margin: 120px auto;
+    padding: 0 20px;
+}
+
+.research-v2-heading {
+    text-align: center;
+    font-size: 2.3rem;
+    color: #343d68;
+    margin-bottom: 60px;
+}
+
+/* Grid */
+.research-v2-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 320px));
+    justify-content: center;
+    gap: 32px;
+}
+
+/* Tile */
+.research-tile {
+    background: #ffffff;
+    padding: 28px 26px 30px;
+    border-radius: 20px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.06);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Accent bar */
+.research-tile::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: #e3e6f3;
+    border-radius: 20px 20px 0 0;
+}
+
+/* Highlight */
+
+
+/* Hover */
+.research-tile:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 50px rgba(0,0,0,0.12);
+}
+
+/* Text */
+.research-tile h3 {
+    font-size: 1.05rem;
+    color: #1f2a44;
+    margin-bottom: 10px;
+}
+
+.research-tile p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Links */
+.research-tile a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .research-v2-heading {
+        font-size: 1.8rem;
+    }
+}

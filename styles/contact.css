@@ -721,3 +721,85 @@ html {
 .submit-button:hover {
     background-color: #45a049;
 }
+
+/* ==========================
+   CONTACT – DIRECT EMAIL
+========================== */
+.contact-direct-section {
+    max-width: 900px;
+    margin: 120px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Heading */
+.contact-heading {
+    font-size: 2.3rem;
+    color: #343d68;
+    margin-bottom: 20px;
+}
+
+/* Description */
+.contact-description {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 50px;
+}
+
+/* Cards */
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* Card */
+.contact-card {
+    background: #ffffff;
+    padding: 30px 26px;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 50px rgba(0,0,0,0.12);
+}
+
+/* Label */
+.contact-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #343d68;
+    padding: 6px 12px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* Email */
+.contact-card h3 {
+    font-size: 1.2rem;
+    color: #1f2a44;
+    margin-bottom: 8px;
+    word-break: break-word;
+}
+
+/* Text */
+.contact-card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .contact-heading {
+        font-size: 1.9rem;
+    }
+}

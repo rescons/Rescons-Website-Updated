@@ -123,44 +123,217 @@
                 max-width: 400px;
             }
         }
+
+        /* ==========================
+   RESEARCH DETAIL PAGE
+========================== */
+.research-detail {
+    max-width: 1000px;
+    margin: 120px auto;
+    padding: 0 20px;
+}
+
+/* Title */
+.research-title {
+    text-align: center;
+    font-size: 2.4rem;
+    color: #1f2a44;
+    margin-bottom: 50px;
+    line-height: 1.3;
+}
+
+/* Text blocks */
+.research-text {
+    margin-bottom: 40px;
+}
+
+.research-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 18px;
+}
+
+/* Highlight */
+.highlight {
+    color: #343d68;
+    font-weight: 600;
+}
+
+/* Figures */
+.research-figures {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin: 60px 0;
+}
+
+.research-figures figure {
+    text-align: center;
+}
+
+.research-figures img {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 14px 35px rgba(0,0,0,0.15);
+}
+
+.research-figures figcaption {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Links */
+.research-text a {
+    color: #343d68;
+    text-decoration: underline;
+}
+
+/* Contact */
+.research-contact {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #e2e4ef;
+    text-align: center;
+}
+
+.research-contact p {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .research-figures {
+        grid-template-columns: 1fr;
+    }
+
+    .research-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .research-title {
+        font-size: 1.7rem;
+    }
+
+    .research-text p {
+        font-size: 0.95rem;
+    }
+}
+
     </style>
 </head>
 <body>
-    <div class="content-section">
-        <h1 class="title">MODELING LIQUID FLOW IN PRESENCE OF GAS FLOW IN PACKED BEDS</h1>
-        
-        <div class="research-content">
-            <p>In our group, the focus is on the study of flow of non-wetting liquid through a porous media under the influence of gas. In many metallurgical reactors, we have situations where the liquid phase is non-wetting and it flows counter current or co current or even cross current to the gas phase.</p>
-            
-            <p>A typical example of this is the lower part of an iron making blast furnace where molten metal and slag descend over the coke matrix, cross current and counter current to the gas flow. Research has shown that non-wetting liquid flows as droplets and rivulets, falling through the bed, and continuously breaking and joining with each other.</p>
-            
-            <p>This is different from wetting flows where the liquid phase flows as film around the packing particles. Under the influence of gas, especially laterally injected gas, the liquid holdup in the bed is also quite different as compared to gas liquid counter current or co current flow conditions.</p>
-            
-            <p>Hence, our efforts have been directed towards the direction of a fundamental understanding of the nature of motion of these droplets and rivulets falling through the bed. We try to model the discrete behavior of liquid flow through a <span class="highlight">force balance approach</span> postulated by <span class="highlight">Gupta et al.</span> (1996, 1997).</p>
-        </div>
+    <section id="research-detail" class="research-detail">
 
-        <div class="image-container">
-            <div class="image-box">
-                <img src="./assets/images/gasLiquidFlow1.png" alt="Theory vs Experimental Results">
-                <div class="image-caption">Figure 1: Comparison between proposed theory and experimental results</div>
-            </div>
-            <div class="image-box">
-                <img src="./assets/images/gasLiquidFlow2.png" alt="Blast Furnace Application">
-                <div class="image-caption">Figure 2: Application in Ironmaking blast furnace</div>
-            </div>
-        </div>
+    <!-- Title -->
+    <h1 class="research-title">
+        Modeling Liquid Flow in Presence of Gas Flow in Packed Beds
+    </h1>
 
-        <div class="research-content">
-            <p>We have postulated a new theory to model the non-wetting flow in a packed bed considering the liquid flow as discrete in nature. Liquid rupture theory has also been incorporated recently in order to use this theory for wider applications.</p>
-            
-            <p>The gas flow has been modeled by solving Navier-Stoke equation in turbulent condition. We employ <a href="./packedBedsFlowVisualization.html">x-ray technique</a> for liquid flow visualization in a packed bed to validate our results.</p>
-            
-            <p>Flow of slag and iron at 40 m/s increasing gas blast velocity. Efforts are underway in our group to model liquid flow path in the random bed considering various liquid holdups, so as to gain a proper understanding of the gas-liquid maldistribution in the bed. Also the effect of <a href="./raceway.html">raceway hysteresis</a> on gas-liquid flow is being investigated.</p>
-        </div>
+    <!-- Intro -->
+    <div class="research-text">
+        <p>
+            In our group, the focus is on the study of flow of
+            <strong>non-wetting liquid through porous media</strong>
+            under the influence of gas. In many metallurgical reactors,
+            the liquid phase is non-wetting and flows
+            counter-current, co-current, or cross-current to the gas phase.
+        </p>
 
-        <div class="contact-section">
-            <p><strong>For further details, queries, or publications related to this research, please <a href="./contact.html">contact us</a> through our contact information on the website.</strong></p>
-        </div>
+        <p>
+            A typical example is the lower region of an ironmaking
+            blast furnace, where molten metal and slag descend
+            over the coke matrix while interacting with the upward gas flow.
+            Research has shown that non-wetting liquids flow as
+            <strong>droplets and rivulets</strong>, continuously breaking
+            and coalescing within the bed.
+        </p>
+
+        <p>
+            This behavior is fundamentally different from wetting flows,
+            where the liquid phase forms a continuous film around
+            the packing particles. Under lateral gas injection,
+            the liquid holdup differs significantly from conventional
+            counter-current or co-current flow conditions.
+        </p>
+
+        <p>
+            Our work is therefore directed toward a
+            <strong>fundamental understanding</strong> of droplet and
+            rivulet motion through packed beds. We model this discrete
+            liquid behavior using a
+            <span class="highlight">force balance approach</span>
+            proposed by <span class="highlight">Gupta et&nbsp;al.</span>
+            (1996, 1997).
+        </p>
     </div>
+
+    <!-- Figures -->
+    <div class="research-figures">
+        <figure>
+            <img src="./assets/images/gasLiquidFlow1.png"
+                 alt="Theory vs Experimental Results">
+            <figcaption>
+                Figure 1: Comparison between proposed theory and experimental results
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="./assets/images/gasLiquidFlow2.png"
+                 alt="Blast Furnace Application">
+            <figcaption>
+                Figure 2: Application in ironmaking blast furnace
+            </figcaption>
+        </figure>
+    </div>
+
+    <!-- Methods & Validation -->
+    <div class="research-text">
+        <p>
+            We have postulated a new theory to model non-wetting
+            liquid flow in packed beds by treating the liquid as
+            <strong>discrete in nature</strong>. Liquid rupture theory
+            has recently been incorporated to extend the applicability
+            of the model.
+        </p>
+
+        <p>
+            Gas flow is modeled by solving the
+            <strong>Navier–Stokes equations</strong>
+            under turbulent conditions. Experimental validation
+            is carried out using
+            <a href="./packedBedsFlowVisualization.html">
+                X-ray radiography techniques
+            </a>
+            for liquid flow visualization in packed beds.
+        </p>
+
+        <p>
+            Current efforts focus on modeling slag and iron flow
+            at high gas blast velocities (~40 m/s) and understanding
+            gas–liquid maldistribution in random packed beds.
+            The influence of
+            <a href="./raceway.html">raceway hysteresis</a>
+            on gas–liquid flow behavior is also being investigated.
+        </p>
+    </div>
+
+    <!-- Contact -->
+    <div class="research-contact">
+        <p>
+            <strong>
+                For further details, publications, or collaboration
+                related to this research, please
+                <a href="./contact.html">contact us</a>.
+            </strong>
+        </p>
+    </div>
+
+</section>
+
 </body>
 </html>

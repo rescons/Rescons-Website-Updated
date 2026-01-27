@@ -656,3 +656,181 @@ body {
         width: 49.99%;
     } */
 }
+
+/* ==========================
+   SERVICES SECTION
+========================== */
+.services-section {
+    max-width: 1300px;
+    margin: 10px auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.services-header {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 60px;
+}
+
+.services-header h1 {
+    font-size: 2rem;
+    line-height: 1.4;
+    color: #1f2a44;
+}
+
+.services-header h1 span {
+    color: #343d68;
+}
+
+.services-subtitle {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #2f3777;
+}
+
+.services-intro {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* ==========================
+   SLIDER
+========================== */
+.services-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.4s ease;
+}
+
+/* Arrows */
+.arrow {
+    background: #343d68;
+    color: #fff;
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow:hover {
+    background: #1f2a44;
+}
+
+/* ==========================
+   CARDS
+========================== */
+.service-card {
+    min-width: 340px;
+    height: 420px;
+    border-radius: 22px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.15);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Background images (replace with your own if needed) */
+.gas-bg {
+    background-image: url("https://preconsfurnaces.com/wp-content/uploads/elementor/thumbs/iron-and-steel-applications-process-industry-q9sdda38plvy1zi3ues1ucah7j7d4d7p1qabfgy4us.jpeg");
+}
+
+.sic-bg {
+    background-image: url("https://www.xinliabrasive.com/wp-content/uploads/2023/07/sic.jpg");
+}
+
+.bcp-bg {
+    background-image: url("https://www.washingtonmills.com/sites/default/files/styles/large/public/images/boron_carbide_2-min.jpg?itok=MFbPFs8l");
+}
+
+/* Overlay */
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(15,20,40,0.85),
+        rgba(15,20,40,0.2)
+    );
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+}
+
+.card-overlay h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.card-overlay h2 small {
+    display: block;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.card-overlay p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.card-cta {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #ffd36a;
+}
+
+/* Hover */
+.service-card:hover .card-overlay {
+    background: linear-gradient(
+        to top,
+        rgba(15,20,40,0.95),
+        rgba(15,20,40,0.4)
+    );
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 900px) {
+    .arrow {
+        display: none;
+    }
+
+    .slider {
+        gap: 20px;
+    }
+
+    .service-card {
+        min-width: 280px;
+        height: 380px;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-header h1 {
+        font-size: 1.6rem;
+    }
+}

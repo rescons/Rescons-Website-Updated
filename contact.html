@@ -71,43 +71,39 @@
         <div class="spacer"></div>
 
 
-        <section class="contact-section">
-            <div class="container">
-                <h1 class="section-title" style="color: #343d68;">Contact Us</h1>
-                <br />
-                <p style="text-align: justify; font-size: 20px;">Our dedicated customer support team is available to
-                    answer any questions
-                    you may have about our products and services. Send all your queries to us. We value your feedback
-                    and
-                    strive to make your experience as seamless as possible.
-                </p>
-                <br />
+        <section id="contact-direct" class="contact-direct-section">
 
-                <form id="contact-form" class="contact-form">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+    <h1 class="contact-heading">
+        Contact Us
+    </h1>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+    <p class="contact-description">
+        Our team is happy to respond to queries related to
+        research, technologies, collaborations, and training programs.
+        <br />
+        Please reach out to us directly via email.
+    </p>
 
-                    <label for="subject">Subject:</label>
-                    <input type="text" id="subject" name="subject" required>
+    <div class="contact-cards">
 
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+        <!-- General Email -->
+        <a href="mailto:info@rescons.in" class="contact-card">
+            <span class="contact-label">General Enquiries</span>
+            <h3>info@rescons.in</h3>
+            <p>For technology, training, and business enquiries</p>
+        </a>
 
-                    <button type="submit" class="submit-button">Send Message</button>
-                </form>
+        <!-- Director Email -->
+        <a href="mailto:govindg@iisc.ac.in" class="contact-card">
+            <span class="contact-label">Director</span>
+            <h3>govindg@iisc.ac.in</h3>
+            <p>For research collaborations and academic interactions</p>
+        </a>
 
-                <div class="form-status">
-                    <div id="loading" class="loading-spinner" style="display: none;">
-                        <div class="spinner"></div>
-                        <p>Sending message...</p>
-                    </div>
-                    <p id="form-message" class="form-message"></p>
-                </div>
+    </div>
 
-        </section>
+</section>
+
 
     </div>
 
