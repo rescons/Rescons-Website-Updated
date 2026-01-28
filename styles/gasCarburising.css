@@ -787,3 +787,23 @@ p {
 .submit-button:hover {
     background-color: #45a049;
 }
+
+.mobile-highlight {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.mobile-highlight strong {
+  color: #fffafa;
+}
+
+/* Optional: keep it neat on small screens */
+@media (max-width: 640px) {
+  .mobile-highlight {
+    font-size: 0.8rem;
+  }
+}

@@ -425,6 +425,35 @@
     }
 }
 
+.announcement-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mobile-availability {
+  font-size: 0.9rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Optional: slightly emphasize mobile */
+.mobile-availability strong {
+  color: #111;
+}
+
+/* Desktop alignment */
+@media (min-width: 640px) {
+  .announcement-actions {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+  }
+}
+
+
     </style>
 </head>
 
@@ -642,7 +671,7 @@
 
         <!-- Image -->
         <div class="founders-image">
-            <img src="./assets/images/govind.jpg" alt="Govind Sharan Gupta and Pratibha Gupta">
+            <img src="./assets/images/govind.JPG" alt="Govind Sharan Gupta and Pratibha Gupta">
         </div>
 
         <!-- Content -->
@@ -683,21 +712,30 @@
 
     <!-- New Announcements Section -->
     <div class="announcements">
-        <div class="announcement-card software-launch">
-            <h2 class="announcement-title">
-                Gas Carburizing Software
-                <span class="announcement-badge">NEW</span>
-            </h2>
-            <p class="announcement-content">
-                We're excited to announce the launch of our trial version of Gas Carburizing Software! Experience
-                advanced simulation and optimization tools designed to enhance your carburizing process. Try it now and
-                revolutionize your heat treatment operations.
-            </p>
-            <a href="https://gascc.rescons.in/" class="announcement-btn btn-pink" _blank>Try Now</a>
-        </div>
+  <div class="announcement-card software-launch">
+    <h2 class="announcement-title">
+      Gas Carburizing Software
+      <span class="announcement-badge">NEW</span>
+    </h2>
 
-    
+    <p class="announcement-content">
+      We're excited to announce the launch of our trial version of Gas Carburizing Software! Experience
+      advanced simulation and optimization tools designed to enhance your carburizing process. Try it now and
+      revolutionize your heat treatment operations.
+    </p>
+
+    <div class="announcement-actions">
+      <a href="https://gascc.rescons.in/" class="announcement-btn btn-pink" target="_blank">
+        Try Now
+      </a>
+
+      <div class="mobile-availability">
+        📱 Also available as a <strong>mobile app</strong>
+      </div>
     </div>
+  </div>
+</div>
+
 
 
 
