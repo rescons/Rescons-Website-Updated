@@ -618,15 +618,423 @@
 }
 
 
+        /* About & Events Split Section */
+        .about-events-section {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            padding: 80px 5%;
+            align-items: flex-start;
+            background: #fff;
+        }
 
+        .about-text-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding-top: 2rem;
+        }
 
+        .about-text-container p {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: #2f3777;
+            font-weight: 500;
+            text-align: left;
+        }
+
+        .about-cta {
+            background-color: #f44336; /* Red color from screenshot */
+            width: fit-content;
+            color: white;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+        .about-cta:hover {
+            background-color: #d32f2f;
+            transform: translateY(-2px);
+        }
+
+        .events-sidebar {
+            background: transparent;
+            border-radius: 0;
+            padding: 0;
+            color: #2f3777;
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar-header {
+            margin-bottom: 20px;
+        }
+
+        .sidebar-eyebrow {
+            color: #ffb400;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.75rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .sidebar-title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 15px;
+        }
+
+        .sidebar-title-row h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1.1;
+            color: #050a18;
+        }
+
+        .scroll-hint {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            text-align: right;
+            font-style: italic;
+        }
+
+        .know-more-link {
+            color: #2f3777;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ffb400;
+            padding-bottom: 2px;
+        }
+
+        .sidebar-scroll-window {
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 24px;
+            mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+        }
+
+        .sidebar-track {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            animation: sidebarScroll 30s linear infinite;
+        }
+
+        .sidebar-track:hover {
+            animation-play-state: paused; /* Added hover to stop */
+        }
+
+        .sidebar-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 220px;
+            flex-shrink: 0;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .sidebar-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.85);
+            transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .sidebar-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .card-overlay {
+            position: absolute;
+            inset: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.85));
+        }
+
+        .card-tag {
+            background: rgba(255,255,255,0.9);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            width: fit-content;
+            color: #050a18;
+            font-weight: 700;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .card-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+            color: #fff;
+            line-height: 1.3;
+        }
+
+        .card-content p {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 10px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-read-story {
+            color: #ffb400;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        @keyframes sidebarScroll {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+
+        @media (max-width: 1024px) {
+            .about-events-section {
+                grid-template-columns: 1fr;
+            }
+            .events-sidebar {
+                position: relative;
+                top: 0;
+            }
+        }
+
+        /* Premium Hero Section Styles */
+        .premium-hero {
+            position: relative;
+            min-height: 100vh;
+            background: radial-gradient(circle at top right, #111827, #000000);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 80px 5%;
+            color: #ffffff;
+            z-index: 1;
+        }
+
+        .premium-hero::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+            filter: blur(80px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .premium-hero-container {
+            max-width: 1400px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+
+        .hero-headline {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: linear-gradient(to bottom right, #ffffff, #9ca3af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subheading {
+            font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+            line-height: 1.6;
+            color: #9ca3af;
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            padding: 16px 32px;
+            background: #10b981;
+            color: #ffffff;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4);
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 35px -10px rgba(16, 185, 129, 0.5);
+            background: #059669;
+        }
+
+        /* Image Collage Styling */
+        .hero-image-collage {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s forwards;
+        }
+
+        .collage-card {
+            position: absolute;
+            width: 320px;
+            height: 200px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px -12px rgba(0, 0, 0, 0.5);
+            transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #1f2937;
+        }
+
+        .collage-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .collage-card:hover {
+            z-index: 50 !important;
+            transform: translateY(-20px) scale(1.1) rotate(0deg) !important;
+            box-shadow: 0 30px 50px -15px rgba(0, 0, 0, 0.6);
+        }
+
+        .collage-card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Card Individual Positions - Reduced overlap */
+        .card-1 { z-index: 10; transform: translate(-120px, -120px) rotate(-8deg); animation: float 6s ease-in-out infinite; }
+        .card-2 { z-index: 8; transform: translate(140px, -100px) rotate(4deg); animation: float 7s ease-in-out infinite reverse; }
+        .card-3 { z-index: 6; transform: translate(-140px, 120px) rotate(-2deg); animation: float 8s ease-in-out infinite 1s; }
+        .card-4 { z-index: 4; transform: translate(160px, 140px) rotate(6deg); animation: float 9s ease-in-out infinite 0.5s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(var(--tx, 0), var(--ty, 0)) rotate(var(--tr, 0)); }
+            50% { transform: translate(var(--tx, 0), calc(var(--ty, 0) - 15px)) rotate(calc(var(--tr, 0) + 1deg)); }
+        }
+
+        /* Assign variables for float animation */
+        .card-1 { --tx: -120px; --ty: -120px; --tr: -8deg; }
+        .card-2 { --tx: 140px; --ty: -100px; --tr: 4deg; }
+        .card-3 { --tx: -140px; --ty: 120px; --tr: -2deg; }
+        .card-4 { --tx: 160px; --ty: 140px; --tr: 6deg; }
+
+        /* Responsiveness */
+        @media (max-width: 1024px) {
+            .premium-hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-subheading {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-image-collage {
+                height: 400px;
+            }
+
+            .collage-card {
+                width: 260px;
+                height: 160px;
+            }
+
+            /* Show all 4 cards on tablet with adjusted positions */
+            .card-1 { transform: translate(-40px, -60px) rotate(-5deg); --tx: -40px; --ty: -60px; --tr: -5deg; }
+            .card-2 { transform: translate(40px, -40px) rotate(5deg); --tx: 40px; --ty: -40px; --tr: 5deg; }
+            .card-3 { transform: translate(-40px, 60px) rotate(-3deg); --tx: -40px; --ty: 60px; --tr: -3deg; }
+            .card-4 { transform: translate(40px, 80px) rotate(4deg); --tx: 40px; --ty: 80px; --tr: 4deg; }
+        }
+
+        @media (max-width: 640px) {
+            .premium-hero {
+                padding: 60px 20px;
+            }
+
+            .hero-headline {
+                font-size: 2.5rem;
+            }
+
+            .hero-image-collage {
+                height: 480px; /* Increased height for better vertical spread */
+            }
+
+            .collage-card {
+                width: 200px; /* Slightly narrower to allow horizontal breathing room */
+                height: 125px;
+            }
+
+            /* Show all 4 cards on mobile with more vertical and horizontal spacing */
+            .card-1 { transform: translate(-50px, -110px) rotate(-5deg); --tx: -50px; --ty: -110px; --tr: -5deg; }
+            .card-2 { transform: translate(50px, -50px) rotate(4deg); --tx: 50px; --ty: -50px; --tr: 4deg; }
+            .card-3 { transform: translate(-45px, 60px) rotate(-3deg); --tx: -45px; --ty: 60px; --tr: -3deg; }
+            .card-4 { transform: translate(45px, 120px) rotate(5deg); --tx: 45px; --ty: 120px; --tr: 5deg; }
+        }
     </style>
 </head>
 
 <body>
-    <div class="wrapper" style="width: 100%; max-width: 100%; padding-left: 5%; padding-right: 5%;">
-
-
+    <div class="wrapper">
         <div class="container">
             <!-- navbar section -->
             <div class="navbar">
@@ -703,246 +1111,216 @@
     <!-- Moving Conference Message - Always visible below navbar -->
  
 
+    <section class="premium-hero">
+        <div class="premium-hero-container">
+            <div class="hero-content">
+                <h1 class="hero-headline">From Waste to Steel.<br>A World-First Innovation.</h1>
+                <p class="hero-subheading">
+                    Transforming agricultural waste into clean industrial energy through 
+                    breakthrough green steel technology.
+                </p>
+                <a href="bof-trial.html" class="hero-cta">Explore the Trial</a>
+            </div>
+            <div class="hero-image-collage">
+                <div class="collage-card card-1"><img src="./assets/images/tr1.jpg" alt="Trial 1"></div>
+                <div class="collage-card card-2"><img src="./assets/images/tr7.jpeg" alt="Trial 7"></div>
+                <div class="collage-card card-3"><img src="./assets/images/tr11.jpeg" alt="Trial 11"></div>
+                <div class="collage-card card-4"><img src="./assets/images/tr14.jpg" alt="Trial 14"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-events-section">
+        <div class="about-text-container">
+            <p>RESCONS Solutions Pvt. Ltd. is a newly incubating company supported
+                by the premier Indian Institute of Science (IISc), Bangalore, and managed by
+                Professor Govind S. Gupta, an Internationally known faculty at IISc in the
+                Materials Engineering Department. The company is established in February
+                2024.</p>
+
+            <p>At Rescons Solutions, we believe in environmentally sustainable
+                solutions that benefit the present and future generations. By collaborating with small and
+                large industries, we aim to create a positive impact on society.</p>
+
+            <p>We specialise in providing Environmentally Friendly, Affordable, and
+                Sustainable Solutions for Gas Carburising, Nitriding, Blast Furnace, DRI, Silicon Carbide,
+                Boron Carbide productions, Zn coating on pipe, etc, to Iron, Steel, and Allied Industries.</p>
+
+            <a href="contact.html" class="about-cta">Contact Us</a>
+        </div>
+
+        <div class="events-sidebar">
+            <div class="sidebar-header">
+                <span class="sidebar-eyebrow">Field Notes</span>
+                <div class="sidebar-title-row">
+                    <h3>Event Highlights</h3>
+                    <span class="scroll-hint">Scroll to explore</span>
+                </div>
+                <a href="#" class="know-more-link">Know More →</a>
+            </div>
+
+            <div class="sidebar-scroll-window">
+                <div class="sidebar-track">
+                    <!-- Event 1: STIS-V -->
+                    <a href="stis-v.html" class="sidebar-card">
+                        <img src="./assets/images/stis-1.JPG" alt="STIS-V Conference">
+                        <div class="card-overlay">
+                            <span class="card-tag">Conference</span>
+                            <div class="card-content">
+                                <h4>STIS-V 2025</h4>
+                                <p>Fifth International Conference on Ironmaking and Steelmaking at IISc.</p>
+                                <span class="card-read-story">Explore Details →</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Event 2: Knowledge Partner -->
+                    <a href="#" class="sidebar-card">
+                        <img src="./assets/images/ad1.JPG" alt="Conference">
+                        <div class="card-overlay">
+                            <span class="card-tag">Conference</span>
+                            <div class="card-content">
+                                <h4>Rescons as Knowledge Partner</h4>
+                                <p>Building REE Supply Chain Through Technology Localization</p>
+                                <span class="card-read-story">See agenda →</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Event 3: Rare Earth Collaboration -->
+                    <a href="rareEarth.html" class="sidebar-card">
+                        <img src="./assets/images/adanipower.jpg" alt="Alliances">
+                        <div class="card-overlay">
+                            <span class="card-tag">Alliances</span>
+                            <div class="card-content">
+                                <h4>Rare Earth Collaboration</h4>
+                                <p>Partnering with Adani for cleaner extraction routes.</p>
+                                <span class="card-read-story">Know More →</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Event 4: Green Ironmaking -->
+                    <a href="greenIronmaking.html" class="sidebar-card">
+                        <img src="./assets/images/greenfe.png" alt="Green Ironmaking">
+                        <div class="card-overlay">
+                            <span class="card-tag">Green Ironmaking</span>
+                            <div class="card-content">
+                                <h4>Collaboration with CSIRO</h4>
+                                <p>Investigating sustainable practices in ironmaking</p>
+                                <span class="card-read-story">Read story →</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Event 5: REE Extraction CSIRO -->
+                    <a href="#" class="sidebar-card">
+                        <img src="./assets/images/csiro.jpg" alt="CSIRO Collaboration">
+                        <div class="card-overlay">
+                            <span class="card-tag">Research</span>
+                            <div class="card-content">
+                                <h4>REE Extraction CSIRO</h4>
+                                <p>Design and synthesis of selective extractants for Nd recovery.</p>
+                                <span class="card-read-story">Learn more →</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Duplicate set for seamless scroll -->
+                    <a href="stis-v.html" class="sidebar-card">
+                        <img src="./assets/images/stis-1.JPG" alt="STIS-V Conference">
+                        <div class="card-overlay">
+                            <span class="card-tag">Conference</span>
+                            <div class="card-content">
+                                <h4>STIS-V 2025</h4>
+                                <p>Fifth International Conference on Ironmaking and Steelmaking at IISc.</p>
+                                <span class="card-read-story">Explore Details →</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="sidebar-card">
+                        <img src="./assets/images/ad1.JPG" alt="Conference">
+                        <div class="card-overlay">
+                            <span class="card-tag">Conference</span>
+                            <div class="card-content">
+                                <h4>Rescons as Knowledge Partner</h4>
+                                <p>Building REE Supply Chain Through Technology Localization</p>
+                                <span class="card-read-story">See agenda →</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="rareEarth.html" class="sidebar-card">
+                        <img src="./assets/images/adanipower.jpg" alt="Alliances">
+                        <div class="card-overlay">
+                            <span class="card-tag">Alliances</span>
+                            <div class="card-content">
+                                <h4>Rare Earth Collaboration</h4>
+                                <p>Partnering with Adani for cleaner extraction routes.</p>
+                                <span class="card-read-story">Know More →</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="greenIronmaking.html" class="sidebar-card">
+                        <img src="./assets/images/greenfe.png" alt="Green Ironmaking">
+                        <div class="card-overlay">
+                            <span class="card-tag">Green Ironmaking</span>
+                            <div class="card-content">
+                                <h4>Collaboration with CSIRO</h4>
+                                <p>Investigating sustainable practices in ironmaking</p>
+                                <span class="card-read-story">Read story →</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="sidebar-card">
+                        <img src="./assets/images/csiro.jpg" alt="CSIRO Collaboration">
+                        <div class="card-overlay">
+                            <span class="card-tag">Research</span>
+                            <div class="card-content">
+                                <h4>REE Extraction CSIRO</h4>
+                                <p>Design and synthesis of selective extractants for Nd recovery.</p>
+                                <span class="card-read-story">Learn more →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div class="wrapper">
-        <section class="major-events">
-  <div class="events-wrapper">
-
-    <div class="events-header">
-      <h2>Major Events & Initiatives</h2>
-      <p>Key engagements and highlights we are leading and participating in.</p>
-    </div>
-
-    <div class="events-grid">
-      
-      <!-- STIS-V Conference Card -->
-      <a href="stis-v.html" class="event-card conference">
-        <span class="event-tag">Conference</span>
-        <h3>STIS-V 2025</h3>
-        <p>
-          Fifth International Conference on the Science & Technology of Ironmaking and Steelmaking.
-          Hosted at IISc Bengaluru, Dec 9–12, 2025.
-        </p>
-        <span class="event-link">Explore Details →</span>
-      </a>
-
-      <!-- BOF Trial Card -->
-      <a href="bof-trial.html" class="event-card trial">
-        <span class="event-tag">Industrial Trial</span>
-<h3>DRI Trial</h3>
-<p>
-  Industrial-scale biomass–coal co-gasification trial producing syngas
-  for use in the DRI process at JSPL, Angul, Odisha.
-</p>
-<span class="event-link">View Details →</span>
-
-      </a>
-
-    </div>
-  </div>
-</section>
-
         <div class="container">
-            <!-- Hero section -->
+            <!-- New Announcements Section -->
+            <div class="announcements">
+                <div class="announcement-card software-launch">
+                    <h2 class="announcement-title">
+                        Gas Carburizing Software
+                        <span class="announcement-badge">NEW</span>
+                    </h2>
 
-            
+                    <p class="announcement-content">
+                        We're excited to announce the launch of our trial version of Gas Carburizing Software! Experience
+                        advanced simulation and optimization tools designed to enhance your carburizing process. Try it
+                        now and
+                        revolutionize your heat treatment operations.
+                    </p>
 
+                    <div class="announcement-actions">
+                        <a href="https://gascc.rescons.in/" class="announcement-btn btn-pink" target="_blank">
+                            Try Now
+                        </a>
 
-            <div class="hero-section">
-                <!-- faded-text -->
-                <div class="absolute faded-text">RESCONS</div>
-
-    
-    
-    
-
-                <!-- Left - text -->
-                <div class="hero-section-left">
-                    <div class="hero-section-heading home">
-                      
-                    </div>
-
-                    <div class="hero-section-sub-heading">
-                        <b style="color: #2f3777;">RESCONS Solutions Pvt. Ltd. is a newly incubating company supported
-                            by the premier Indian Institute of Science (IISc), Bangalore, and managed by
-                           Professor Govind S. Gupta, an Internationally known faculty at IISc in the
-                            Materials Engineering Department. The company is established in February
-                                2024.
-                            </b>
-                       
-                    </div> 
-
-
-                    <div class="hero-section-sub-heading">
-                        <b style="color: #2f3777;">At Rescons Solutions, we believe in environmentally sustainable
-                            solutions that benefit the present and future generations. By collaborating with small and
-                            large industries, we aim to create a positive impact on society. </b>
-                    </div>
-
-                    <div class="hero-section-sub-heading">
-                        <b style="color: #2f3777;">We specialise in providing Environmentally Friendly, Affordable, and
-                            Sustainable Solutions for Gas Carburising, Nitriding, Blast Furnace, DRI, Silicon Carbide,
-                            Boron Carbide productions, Zn coating on pipe, etc, to Iron, Steel, and Allied Industries.
-                        </b>
-                    </div>
-
-
-
-                    <div class="btn-pink" id="btn-home">
-                        <a target="_blank" href="contact.html">Contact Us</a>
-                    </div>
-                </div>
-
-                <!-- Right - event gallery -->
-                <div class="hero-section-right">
-                    <div class="event-stack" aria-label="Rescons event highlights">
-                        <div class="event-stack-header">
-                            <div>
-                                <p class="eyebrow">Field Notes</p>
-                                <h3>Event Highlights</h3>
-                            </div>
-                            <span class="stack-hint">Scroll to explore</span>
-                        </div>
-                        <div class="event-stack-window">
-                            <div class="event-stack-track">
-                                
-
-                                
-
-                                <a class="event-highlight-card" href="">
-                                    <img src="./assets/images/ad1.JPG" alt="Workshop with industry delegates" />
-                                    <div class="event-highlight-overlay">
-                                        <div>
-                                            <p class="event-tag">Conference</p>
-                                            <h4>Rescons as a Knowledge Partner</h4>
-                                            <p>Building REE Supply Chain Through Technology Localization</p>
-                                        </div>
-                                        <span class="event-link">See agenda →</span>
-                                    </div>
-                                </a>
-
-                                <a class="event-highlight-card" href="rareEarth.html">
-                                    <img src="./assets/images/adanipower.jpg" alt="Collaboration at Adani facility" />
-                                    <div class="event-highlight-overlay">
-                                        <div>
-                                            <p class="event-tag">Alliances</p>
-                                            <h4>Rare Earth Collaboration</h4>
-                                            <p>Partnering with Adani for cleaner extraction routes.</p>
-                                        </div>
-                                        <span class="event-link">Know More →</span>
-                                    </div>
-                                </a>
-
-                                <!-- duplicate set for smooth loop -->
-                                <a class="event-highlight-card" href="greenIronmaking.html">
-                                    <img src="./assets/images/greenfe.png" alt="Green furnace industrial trial" />
-                                    <div class="event-highlight-overlay">
-                                        <div>
-                                            <p class="event-tag">Green Ironmaking</p>
-                                            <h4>Collaboration with CSIRO</h4>
-                                            <p>Investigating sustainable practices in ironmaking</p>
-                                        </div>
-                                        <span class="event-link">Read story →</span>
-                                    </div>
-                                </a>
-
-                                <a class="event-highlight-card" href="">
-                                    <img src="./assets/images/csiro.jpg" alt="Silicon carbide reactor close-up" />
-                                    <div class="event-highlight-overlay">
-                                        <div>
-                                            <p class="event-tag">Rare Earth Element Extraction</p>
-                                            <h4>In Collaboration with CSIRO</h4>
-                                            <p>Design and Synthesis of Selective Extractants for Nd Recovery from Fly Ash of Thermal Power Plants</p>
-                                        </div>
-                                        <span class="event-link">Learn more →</span>
-                                    </div>
-                                </a>
-
-                                
-
-                                <a class="event-highlight-card" href="contact.html">
-                                    <img src="./assets/images/adanipower.jpg" alt="Collaboration at Adani facility" />
-                                    <div class="event-highlight-overlay">
-                                        <div>
-                                            <p class="event-tag">Alliances</p>
-                                            <h4>Rare Earth Collaboration</h4>
-                                            <p>Partnering with Adani for cleaner extraction routes.</p>
-                                        </div>
-                                        <span class="event-link">Partner with us →</span>
-                                    </div>
-                                </a>
-                            </div>
+                        <div class="mobile-availability">
+                            📱 Also available as a <strong>mobile app</strong>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-
-    <section class="partner-events">
-  <div class="partner-events-container">
-
-    <h2 class="partner-events-title">Rescons as Conference Partner & Sponsor</h2>
-
-    <div class="partner-events-grid">
-
-      <!-- Symposium 2026 -->
-      <div class="partner-event-card">
-        <!-- <div class="partner-event-image">
-          <img src="assets/images/events/symposium-2026.jpg" alt="Symposium 2026 Materials Engineering">
-        </div> -->
-        <div class="partner-event-content">
-          <h3>Symposium 2026</h3>
-          <p>Materials Engineering</p>
-        </div>
-      </div>
-
-      <!-- STIS-V -->
-      <div class="partner-event-card">
-        <!-- <div class="partner-event-image">
-          <img src="assets/images/events/stis-v.jpg" alt="STIS-V Conference">
-        </div> -->
-        <div class="partner-event-content">
-          <h3>STIS-V</h3>
-          <p>Science & Technology of Ironmaking and Steelmaking</p>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-
-    
-
-
-    <!-- New Announcements Section -->
-    <div class="announcements">
-  <div class="announcement-card software-launch">
-    <h2 class="announcement-title">
-      Gas Carburizing Software
-      <span class="announcement-badge">NEW</span>
-    </h2>
-
-    <p class="announcement-content">
-      We're excited to announce the launch of our trial version of Gas Carburizing Software! Experience
-      advanced simulation and optimization tools designed to enhance your carburizing process. Try it now and
-      revolutionize your heat treatment operations.
-    </p>
-
-    <div class="announcement-actions">
-      <a href="https://gascc.rescons.in/" class="announcement-btn btn-pink" target="_blank">
-        Try Now
-      </a>
-
-      <div class="mobile-availability">
-        📱 Also available as a <strong>mobile app</strong>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 

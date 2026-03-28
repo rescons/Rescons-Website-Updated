@@ -1,111 +1,614 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BOF Trial | Industrial-Scale Experiment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Steel Trial | Rescons Solutions</title>
+    <link rel="icon" href="./assets/images/favicon.png" />
+    <style>
+        :root {
+            --primary-green: #10b981;
+            --primary-dark: #0a0f1a;
+            --secondary-dark: #111827;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
 
-  <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #ffffff;
-      color: #1f2937;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
 
-    .event-page {
-      padding: 4rem 1.5rem;
-    }
+        body {
+            background-color: var(--primary-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-    .event-container {
-      max-width: 900px;
-      margin: auto;
-    }
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-    .event-hero {
-      text-align: center;
-      margin-bottom: 2.5rem;
-    }
+        .section-padding {
+            padding: 100px 0;
+        }
 
-    .event-label {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 0.4rem 0.9rem;
-      border-radius: 999px;
-      background: #ecfdf5;
-      color: #047857;
-    }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
 
-    .event-hero h1 {
-      font-size: 2.2rem;
-      margin: 1rem 0 0;
-    }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-    .event-content {
-      margin-top: 2rem;
-    }
+        /* Section 1: Hero Header */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: var(--primary-dark);
+            overflow: hidden;
+        }
 
-    .event-content p {
-      margin-top: 1rem;
-      line-height: 1.7;
-      color: #374151;
-    }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('./assets/images/tr7.jpeg');
+            background-size: 100% 100%; /* Fill the container exactly to avoid cropping */
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.2; /* Low opacity */
+            z-index: 0;
+        }
 
-    .coming-soon {
-      margin-top: 2rem;
-      padding: 1rem 1.25rem;
-      background: #f9fafb;
-      border-left: 4px solid #9ca3af;
-      color: #4b5563;
-      font-size: 0.95rem;
-      border-radius: 6px;
-    }
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.1), transparent),
+                        linear-gradient(to bottom, transparent, var(--primary-dark));
+            z-index: 1;
+        }
 
-    /* Responsive */
-    @media (max-width: 640px) {
-      .event-page {
-        padding: 3rem 1rem;
-      }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to bottom right, #ffffff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-      .event-hero h1 {
-        font-size: 1.8rem;
-      }
-    }
-  </style>
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        .metadata-row {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .meta-item span {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .meta-item p {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Section 2: Visual Story (Marquee) */
+        .visual-story {
+            background: var(--secondary-dark);
+            padding: 60px 0 100px;
+            overflow: hidden;
+        }
+
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 20px;
+            width: max-content;
+            animation: marquee 40s linear infinite;
+        }
+
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        .gallery-card {
+            flex: 0 0 400px;
+            height: 280px;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 1px solid var(--glass-border);
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-50% - 10px)); }
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Section 3: The Problem */
+        .problem-section {
+            background-color: var(--primary-dark);
+        }
+
+        .side-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .problem-text h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: #ffffff;
+        }
+
+        .problem-text p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .side-image {
+            width: 100%;
+            height: 500px;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+        }
+
+        .side-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Section 4: The Solution */
+        .solution-section {
+            background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
+        }
+
+        .flow-diagram {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 60px;
+            position: relative;
+        }
+
+        .flow-step {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            padding: 24px 40px;
+            border-radius: 16px;
+            text-align: center;
+            flex: 1;
+            margin: 0 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .flow-step h4 {
+            color: var(--primary-green);
+            font-size: 1.2rem;
+        }
+
+        .flow-arrow {
+            color: var(--primary-green);
+            font-size: 2rem;
+        }
+
+        /* Section 5: Results / Impact */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .impact-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 40px;
+            border-radius: 24px;
+            transition: all 0.4s ease;
+        }
+
+        .impact-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-green);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .impact-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        /* Section 6: Media Coverage */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .media-card {
+            background: var(--secondary-dark);
+            border: 1px solid var(--glass-border);
+            padding: 30px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .media-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-green);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.1);
+        }
+
+        .media-source {
+            font-size: 0.8rem;
+            color: var(--primary-green);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .media-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .read-more {
+            color: var(--primary-green);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Section 7: Quote */
+        .quote-section {
+            background-color: var(--secondary-dark);
+            text-align: center;
+        }
+
+        .quote-block blockquote {
+            font-size: 2.5rem;
+            font-style: italic;
+            font-weight: 600;
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            line-height: 1.3;
+        }
+
+        .quote-attribution {
+            color: var(--primary-green);
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        /* Section 9: CTA */
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(to top, #064e3b, var(--primary-dark));
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--primary-green);
+            color: white;
+            padding: 18px 45px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-decoration: none;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            background: #059669;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .gallery-card {
+                flex: 0 0 300px;
+                height: 200px;
+            }
+            .side-layout {
+                grid-template-columns: 1fr;
+            }
+            .flow-diagram {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .metadata-row {
+                gap: 1.5rem;
+            }
+            .side-image {
+                height: 350px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <section class="event-page">
-    <div class="event-container">
-
-      <header class="event-hero">
-        <span class="event-label">Industrial Trial</span>
-        <h1>Industrial-Scale Experiment of Biomass–Coal Co-Gasification</h1>
-      </header>
-
-      <div class="event-content">
-        <p>
-          <strong>
-            Industrial-Scale Experiment of Biomass-Coal Co-Gasification to Produce
-            Syngas for DRI Process
-          </strong>
-        </p>
-
-        <p>
-          Industrial-scale co-gasification of biomass with coal was carried out in a
-          long-term run at JSPL, Angul, Odisha. The produced syngas is effectively
-          utilized in the DRI process, showcasing a sustainable and efficient approach
-          to energy and steel production.
-        </p>
-
-        <div class="coming-soon">
-          More details will be shared soon.
+    <!-- Section 1: Hero -->
+    <header class="hero">
+        <div class="container hero-content">
+            <h1 class="reveal">A World-First Step<br>Toward Green Steel</h1>
+            <p class="hero-subtitle reveal">Replacing coal with agricultural waste in real-world steel production</p>
+            
+            <div class="metadata-row reveal">
+                <div class="meta-item">
+                    <span>Timeline</span>
+                    <p>2024 - 2026</p>
+                </div>
+                <div class="meta-item">
+                    <span>Trial Location</span>
+                    <p>JSPL Angul, Odisha</p>
+                </div>
+                <div class="meta-item">
+                    <span>Partners</span>
+                    <p>CSIRO, IISc Bangalore, Rescons Solutions, JSPL</p>
+                </div>
+            </div>
         </div>
-      </div>
+    </header>
 
-    </div>
-  </section>
+    <!-- Section 2: Visual Story -->
+    <section class="visual-story">
+        <div class="marquee-container reveal">
+            <div class="marquee-track">
+                <!-- Original Set -->
+                <div class="gallery-card"><img src="./assets/images/tr1.jpg" alt="Trial 1"></div>
+                <div class="gallery-card"><img src="./assets/images/tr8.jpeg" alt="Trial 8"></div>
+                <div class="gallery-card"><img src="./assets/images/tr9.jpeg" alt="Trial 9"></div>
+                <div class="gallery-card"><img src="./assets/images/tr10.jpeg" alt="Trial 10"></div>
+                <div class="gallery-card"><img src="./assets/images/tr12.jpeg" alt="Trial 12"></div>
+                <div class="gallery-card"><img src="./assets/images/tr13.jpeg" alt="Trial 13"></div>
+                <!-- Duplicated Set for Seamless Loop -->
+                <div class="gallery-card"><img src="./assets/images/tr1.jpg" alt="Trial 1"></div>
+                <div class="gallery-card"><img src="./assets/images/tr8.jpeg" alt="Trial 8"></div>
+                <div class="gallery-card"><img src="./assets/images/tr9.jpeg" alt="Trial 9"></div>
+                <div class="gallery-card"><img src="./assets/images/tr10.jpeg" alt="Trial 10"></div>
+                <div class="gallery-card"><img src="./assets/images/tr12.jpeg" alt="Trial 12"></div>
+                <div class="gallery-card"><img src="./assets/images/tr13.jpeg" alt="Trial 13"></div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Section 3: The Problem -->
+    <section class="problem-section section-padding">
+        <div class="container">
+            <div class="problem-text reveal" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2>The Problem</h2>
+                <p>The global steel industry is one of the largest contributors to carbon emissions, accounting for nearly 8% of global CO2 output.</p>
+                <p>For decades, steel production has relied heavily on coking coal as a reducing agent in blast furnaces and DRI processes, creating a massive carbon footprint that traditional methods struggle to offset.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: The Solution -->
+    <section class="solution-section section-padding">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;" class="reveal">
+                <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">The Solution</h2>
+                <p style="font-size: 1.2rem; color: #d1fae5;">Our breakthrough technology converts rice husk and other agricultural waste into high-quality syngas, directly replacing coal in the Direct Reduced Iron (DRI) process.</p>
+            </div>
+            
+            <div class="flow-diagram reveal">
+                <div class="flow-step"><h4>Waste</h4><p>Agri-Residuals</p></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><h4>Biomass</h4><p>Preprocessing</p></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><h4>Gasification</h4><p>Syngas Generation</p></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><h4>Steel</h4><p>Clean Production</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Results -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 3rem;" class="reveal">The Impact</h2>
+            <div class="impact-grid">
+                <div class="impact-card reveal">
+                    <div class="impact-number">30%</div>
+                    <h3>Emission Reduction</h3>
+                    <p>Potential to reduce carbon intensity of DRI steel by up to 30% through coal replacement.</p>
+                </div>
+                <div class="impact-card reveal">
+                    <div class="impact-number">Zero</div>
+                    <h3>Waste Policy</h3>
+                    <p>Utilizing agricultural waste that would otherwise be burned in fields, reducing air pollution.</p>
+                </div>
+                <div class="impact-card reveal">
+                    <div class="impact-number">100%</div>
+                    <h3>Industrial Ready</h3>
+                    <p>Successfully demonstrated at scale in partnership with leading steel producers like JSPL.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Media Coverage -->
+    <section class="section-padding" style="background-color: var(--secondary-dark);">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 3rem;" class="reveal">Featured In</h2>
+            <div class="media-grid">
+                <a href="https://www.aninews.in/news/business/australia-india-partnership-moves-closer-to-green-steel-with-world-first-agricultural-waste-trial20260310114540/" target="_blank" rel="noopener noreferrer" class="media-card reveal">
+                    <span class="media-source">ANI News</span>
+                    <h3>Australia-India partnership moves closer to green steel with world-first agricultural waste trial</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">Collaborative efforts in climate-tech lead to breakthrough results at scale.</p>
+                    <span class="read-more">Read Full Article →</span>
+                </a>
+                <a href="https://www.uniindia.com/~/australia-india-partnership-advances-green-steel-with-world-first-use-of-agricultural-waste/India/news/3768632.html" target="_blank" rel="noopener noreferrer" class="media-card reveal">
+                    <span class="media-source">UNI India</span>
+                    <h3>Australia-India partnership advances green steel with world-first use of agricultural waste</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">Significant milestone achieved in the decarbonization journey of the steel industry.</p>
+                    <span class="read-more">Read Full Article →</span>
+                </a>
+                <a href="https://www.newsx.com/press-release/australia-india-partnership-takes-step-closer-to-green-steel-through-world-first-use-of-ag-waste-in-steelmaking-180435/" target="_blank" rel="noopener noreferrer" class="media-card reveal">
+                    <span class="media-source">NewsX</span>
+                    <h3>Australia-India partnership takes step closer to green steel through world-first use of ag waste</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">Transforming industrial processes through research and innovation.</p>
+                    <span class="read-more">Read Full Article →</span>
+                </a>
+                <a href="https://www.soundtelegraph.com.au/business/iron-ore/rice-could-be-key-ingredient-to-cutting-steel-emissions-c-21895779?utm_source=csp&utm_medium=portal&utm_campaign=Streem&token=2t3JSMi7UqJOgJlzwGkawKbrMLc%2Fwpsq%2FOUhz2d0f6h2uUQiPVeb2EEnhedsD8cedPU3DzLFjBCt2s4GfkJhJg%3D%3D" target="_blank" rel="noopener noreferrer" class="media-card reveal">
+                    <span class="media-source">Sound Telegraph</span>
+                    <h3>Rice could be key ingredient to cutting steel emissions</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">An Australian-Indian venture proves that biomass can effectively replace coal.</p>
+                    <span class="read-more">Read Full Article →</span>
+                </a>
+                <a href="https://www.msn.com/en-in/technology/general/world-first-green-steel-trial-in-india-uses-rice-husks-to-cut-coal/ar-AA1XSDFS?ocid=BingNewsVerp" target="_blank" rel="noopener noreferrer" class="media-card reveal">
+                    <span class="media-source">MSN</span>
+                    <h3>World-first green steel trial in India uses rice husks to cut coal</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">International collaboration brings innovative solutions to traditional heavy industry.</p>
+                    <span class="read-more">Read Full Article →</span>
+                </a>
+                <a href="https://indiaeducationdiary.in/world-first-trial-shows-crop-waste-can-replace-coal-in-steelmaking/" target="_blank" rel="noopener noreferrer" class="media-card reveal">
+                    <span class="media-source">India Education Diary</span>
+                    <h3>World-first trial shows crop waste can replace coal in steelmaking</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">Bridging the gap between academic research and industrial application.</p>
+                    <span class="read-more">Read Full Article →</span>
+                </a>
+                <a href="https://www.apnnews.com/world-first-trial-shows-crop-waste-can-replace-coal-in-steelmaking/" target="_blank" rel="noopener noreferrer" class="media-card reveal">
+                    <span class="media-source">APN News</span>
+                    <h3>World-first trial shows crop waste can replace coal in steelmaking</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">Industrial-scale experiment demonstrates the feasibility of green steel technology.</p>
+                    <span class="read-more">Read Full Article →</span>
+                </a>
+                <a href="https://www.indiamanufacturingreview.com/manufacturing/news/australiaindia-green-steel-push-with-agri-waste-trial-nwid-10760.html" target="_blank" rel="noopener noreferrer" class="media-card reveal">
+                    <span class="media-source">India Manufacturing Review</span>
+                    <h3>Australia-India green steel push with agri-waste trial</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">Leading the manufacturing sector toward a more sustainable and efficient future.</p>
+                    <span class="read-more">Read Full Article →</span>
+                </a>
+                <a href="https://www.theindiansun.com.au/2026/03/10/australia-india-green-steel-trial-uses-agricultural-waste-to-cut-emissions/" target="_blank" rel="noopener noreferrer" class="media-card reveal">
+                    <span class="media-source">The Indian Sun</span>
+                    <h3>Australia-India green steel trial uses agricultural waste to cut emissions</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">Breakthrough trial demonstrates the potential of biomass to replace coal in steelmaking.</p>
+                    <span class="read-more">Read Full Article →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Quote -->
+    <section class="quote-section section-padding">
+        <div class="container quote-block reveal">
+            <blockquote>"At RESCONS Solutions, we believe in environmentally sustainable solutions that benefit present and future generations. Collaborating with CSIRO and IISc, we are proud to help pioneer the use of biomass in steelmaking, supporting India’s transition to greener industrial practices."</blockquote>
+            <p class="quote-attribution">— Professor Govind S. Gupta, IISc Bangalore</p>
+        </div>
+    </section>
+
+    <!-- Section 9: CTA -->
+    <section class="cta-section section-padding">
+        <div class="container reveal">
+            <h2 style="font-size: 3.5rem; margin-bottom: 1.5rem;">Join the Future of Green Steel</h2>
+            <p style="font-size: 1.3rem; color: var(--text-muted);">Collaborate with us to build a more sustainable industrial landscape.</p>
+            <a href="contact.html" class="cta-btn">Partner With Us</a>
+        </div>
+    </section>
+
+    <script>
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
