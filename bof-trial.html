@@ -393,11 +393,35 @@
                 flex-direction: column;
                 gap: 20px;
             }
+            .flow-arrow {
+                transform: rotate(90deg); /* Rotated to point downwards on mobile */
+                margin: 10px 0;
+            }
             .metadata-row {
                 gap: 1.5rem;
             }
             .side-image {
                 height: 350px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            .media-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .impact-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .quote-block blockquote {
+                font-size: 1.6rem;
             }
         }
     </style>
